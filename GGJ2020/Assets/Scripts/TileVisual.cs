@@ -19,7 +19,7 @@ public class TileVisual : MonoBehaviour
     }
 
     public void OnInit(){
-        GetComponent<SpriteRenderer>().sprite = spriteTerrains[Random.Range(0, 10)];
+        GetComponent<SpriteRenderer>().sprite = spriteTerrains[Random.Range(0, 15)];
 
 
     }

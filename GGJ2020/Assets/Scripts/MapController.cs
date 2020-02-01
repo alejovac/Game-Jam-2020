@@ -38,9 +38,10 @@ public class MapController : MonoBehaviour
         {
             for (int i = 0; i < 15; i++)
             {
-                tileVisualPosition = new Vector3(initWorld.x + i * sizeTile.x / 2, initWorld.y - j * sizeTile.y / 2, 0.0f);
+                tileVisualPosition = new Vector3(initWorld.x + i * sizeTile.x, initWorld.y - j * sizeTile.y, 0.0f);
                 tiles[i, j] = Instantiate(tileGO, tileVisualPosition, Quaternion.identity);//arreglar aquí posicionamiento
                 tiles[i, j].GetComponent<TileLogic>().OnInit(i, j);
+                tiles[i, j].transform.SetParent(this.transform);
 
             }
         }
