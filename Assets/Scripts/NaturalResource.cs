@@ -15,10 +15,10 @@ public class NaturalResource : MonoBehaviour
     public shapeAction typeShape;
     public int rangeAction;
     public int cost;
-
+    public int rangeHealing;
     //Condition
-    public int luminosityNeeded;
-    public int humidityNeeded;
+    public Vector2 luminosityNeeded;
+    public Vector2 humidityNeeded;
 
     public int luminosity;
     public int humidity;
@@ -37,7 +37,9 @@ public class NaturalResource : MonoBehaviour
     }
 
     public bool CheckTerrain(TileLogic terrain) {
-        if (terrain.luminosity >= luminosityNeeded && terrain.humidity >= humidityNeeded && terrain.nutrients >= nutrients && terrain.resource!=null) {
+        bool luminosidadBien = luminosityNeeded.x <= terrain.luminosity && luminosityNeeded.y >= terrain.luminosity;
+        bool humedadBien = humidityNeeded.x <= terrain.humidity && humidityNeeded.y >= terrain.humidity;
+        if (luminosidadBien && humedadBien && terrain.nutrients >= nutrients && terrain.resource!=null) {
             return true;
         }
         return false;
