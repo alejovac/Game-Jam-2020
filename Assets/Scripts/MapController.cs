@@ -28,7 +28,8 @@ public class MapController : MonoBehaviour
 
     }
 
-    void OnCreateMap(){
+    void OnCreateMap()
+    {
 
         SpriteRenderer spriteRenderer = tileGO.GetComponent<SpriteRenderer>();
         Vector3 sizeTile = spriteRenderer.sprite.bounds.size;
@@ -49,7 +50,7 @@ public class MapController : MonoBehaviour
 
         //size in pixels
         Vector3 in_pixels = new Vector3(screen_size.x * Camera.main.pixelWidth, screen_size.y * Camera.main.pixelHeight, 0);
-        Vector3 offset =  new Vector3(0.5f * local_sprite_size.x, -local_sprite_size.y, 0.0f);
+        Vector3 offset = new Vector3(0.5f * local_sprite_size.x, -local_sprite_size.y, 0.0f);
 
         for (int j = 14; j >= 0; j--)
         {

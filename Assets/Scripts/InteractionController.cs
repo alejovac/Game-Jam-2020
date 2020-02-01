@@ -18,16 +18,15 @@ public class InteractionController : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            DragNaturalResourse();
+            DragNaturalResource();
         } else if (Input.GetMouseButtonUp(0) && plant != null) {
-            DropNaturalResourse();
+            DropNaturalResource();
         }
     }
 
-    void DragNaturalResourse() {
-        RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit)) {
+    void DragNaturalResource() {
+        RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider != null) {
             GameObject hitGO = hit.transform.gameObject;
 
             if (hitGO.tag == "ShopTile") {
@@ -43,27 +42,27 @@ public class InteractionController : MonoBehaviour
         }
     }
 
-    void DropNaturalResourse() {
-        RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit)) {
-            GameObject hitGO = hit.transform.gameObject;
+    void DropNaturalResource() {
+        //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorld(Input.mousePosition, Vector2.zero));
+        //if (Physics2D.Raycast(ray, out hit)) {
+        //    GameObject hitGO = hit.transform.gameObject;
 
-            if (hitGO.tag == "MapTile") {
-                hitGO.GetComponent<TileLogic>().OnApplyResource(plant);
-                if (originTile != null) {
-                    originTile.OnRemoveResource(plant);
-                } else {
+        //    if (hitGO.tag == "MapTile") {
+        //        hitGO.GetComponent<TileLogic>().OnApplyResource(plant);
+        //        if (originTile != null) {
+        //            originTile.OnRemoveResource(plant);
+        //        } else {
 
-                }
-            } else if (hitGO.tag == "MapTile") {
-                if (originTile != null) {
-                    originTile.OnRemoveResource(plant);
-                }
-            }
-        }
+        //        }
+        //    } else if (hitGO.tag == "MapTile") {
+        //        if (originTile != null) {
+        //            originTile.OnRemoveResource(plant);
+        //        }
+        //    }
+        //}
 
-        plant = null; 
-        originTile = null;
+        //plant = null; 
+        //originTile = null;
     }
 }
