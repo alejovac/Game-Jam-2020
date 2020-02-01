@@ -28,45 +28,36 @@ public class MapController : MonoBehaviour
 
     }
 
-    void OnCreateMap()
-    {
+    void OnCreateMap(){
 
         SpriteRenderer spriteRenderer = tileGO.GetComponent<SpriteRenderer>();
         Vector3 sizeTile = spriteRenderer.sprite.bounds.size;
         Vector3 tileVisualPosition; //esta es la variable que contiene la posición real en la pantalla
-        Vector2 initWorld = Camera.main.ScreenToWorldPoint(new Vector3(initXpos, initYpos, 0.0f));
+
+        Vector2 initWorld = new Vector2(initXpos, initYpos) * sizeTile;
         Vector2 initLocal = new Vector3(initXpos, initYpos, 0.0f);
+        int totalTiles = 15; // N de tiles
 
-        Vector2 sprite_size = spriteRenderer.sprite.rect.size;
-        Vector2 local_sprite_size = sprite_size / spriteRenderer.sprite.pixelsPerUnit;
+        float height = Camera.main.orthographicSize * 2.0f;
+        float width = height * Camera.main.aspect;
 
-        Vector3 world_size = local_sprite_size;
-        world_size.x *= transform.lossyScale.x;
-        world_size.y *= transform.lossyScale.y;
+        Vector3 offset = new Vector3(-(sizeTile.x * totalTiles) * 0.5f, (sizeTile.y * totalTiles * 0.5f) - height) + sizeTile * 0.5f;
 
-        //convert to screen space size
-        Vector3 screen_size = 0.5f * world_size / Camera.main.orthographicSize;
-        screen_size.y *= Camera.main.aspect;
-
-        //size in pixels
-        Vector3 in_pixels = new Vector3(screen_size.x * Camera.main.pixelWidth, screen_size.y * Camera.main.pixelHeight, 0);
-        Vector3 offset = new Vector3(0.5f * local_sprite_size.x, -local_sprite_size.y, 0.0f);
-
-        for (int j = 14; j >= 0; j--)
+        for (int j = 0; j < totalTiles; j++)
         {
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < totalTiles; i++)
             {
-                tileVisualPosition = Camera.main.ScreenToWorldPoint(
-                    new Vector3
+                var screenPos = new Vector3
                     (
-                        initLocal.x + i * in_pixels.x,
-                        initLocal.y + (14.0f - j) * in_pixels.y,
-                        0.0f)
+                        initWorld.x + i * sizeTile.x,
+                        initWorld.y + (totalTiles - 1.0f - j) * sizeTile.y,
+                        0.0f
                     );
 
+                tileVisualPosition = (screenPos);
                 tileVisualPosition += offset;
-
                 tileVisualPosition.z = 0.0f;
+
                 tiles[i, j] = Instantiate(tileGO, tileVisualPosition, Quaternion.identity);//arreglar aquí posicionamiento
                 tiles[i, j].GetComponent<TileLogic>().OnInit(i, j);
                 tiles[i, j].transform.SetParent(this.transform);

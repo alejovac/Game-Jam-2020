@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
+    public List<NaturalResource> naturalResources;
+
 
     public int money;
 
