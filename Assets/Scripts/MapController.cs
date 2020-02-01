@@ -34,7 +34,7 @@ public class MapController : MonoBehaviour
         Vector3 tileVisualPosition; //esta es la variable que contiene la posición real en la pantalla
 
         Vector2 initWorld = Camera.main.ScreenToWorldPoint(new Vector3(initXpos, initYpos, 0.0f));
-        for (int j = 0; j < 15; j++)
+        for (int j = 14; j >= 0; j--)
         {
             for (int i = 0; i < 15; i++)
             {

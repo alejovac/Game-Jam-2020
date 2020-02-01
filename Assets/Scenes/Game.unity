@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94a69b4412ffe548902501ee5aab5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initXpos: -3
-  initYpos: 2
+  initXpos: 0
+  initYpos: 0
   tileGO: {fileID: 5478450426091568599, guid: dda87bf67e2161948805e77a2de4426d, type: 3}
 --- !u!4 &334895352
 Transform:
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334895350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -293,12 +293,12 @@ PrefabInstance:
     - target: {fileID: 5478450426091568597, guid: dda87bf67e2161948805e77a2de4426d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 5478450426091568597, guid: dda87bf67e2161948805e77a2de4426d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 5478450426091568597, guid: dda87bf67e2161948805e77a2de4426d,
         type: 3}
