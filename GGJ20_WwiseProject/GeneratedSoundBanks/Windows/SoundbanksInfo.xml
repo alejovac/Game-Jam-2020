@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ2020/Game-Jam-2020/GGJ20_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ2020/Game-Jam-2020/GGJ20_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ2020/Game-Jam-2020/GGJ20_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ2020/Game-Jam-2020/GGJ20_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,17 +21,17 @@
 			<ShortName>GGJ20</ShortName>
 			<Path>GGJ20.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1138681371" Name="player_buy" ObjectPath="\Events\Default Work Unit\player_buy" DurationType="OneShot" DurationMin="0.555562" DurationMax="0.555562"/>
-				<Event Id="3409090725" Name="player_sell" ObjectPath="\Events\Default Work Unit\player_sell" DurationType="OneShot" DurationMin="0.509250" DurationMax="0.509250"/>
+				<Event Id="3055392428" Name="pl_buy" ObjectPath="\Events\Default Work Unit\pl_buy" DurationType="OneShot" DurationMin="0.678375" DurationMax="0.678375"/>
+				<Event Id="3824442600" Name="pl_sell" ObjectPath="\Events\Default Work Unit\pl_sell" DurationType="OneShot" DurationMin="0.509250" DurationMax="0.509250"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="300398778" Language="SFX">
-					<ShortName>player_buy.wav</ShortName>
-					<Path>SFX/player_buy_10C4C929.wem</Path>
-				</File>
 				<File Id="412762140" Language="SFX">
 					<ShortName>player_sell.wav</ShortName>
 					<Path>SFX/player_sell_10C4C929.wem</Path>
+				</File>
+				<File Id="862211857" Language="SFX">
+					<ShortName>pl_buy.wav</ShortName>
+					<Path>SFX/pl_buy_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
