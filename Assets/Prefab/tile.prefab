@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5478450426091568598}
   - component: {fileID: 8970558616935925995}
   - component: {fileID: 2726061497312665944}
-  - component: {fileID: 3212374917599108008}
+  - component: {fileID: 3542258792496621836}
   m_Layer: 0
   m_Name: tile
   m_TagString: Untagged
@@ -127,7 +127,7 @@ MonoBehaviour:
   - {fileID: 21300026, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300028, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300030, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
---- !u!61 &3212374917599108008
+--- !u!61 &3542258792496621836
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,7 +137,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -151,5 +151,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
