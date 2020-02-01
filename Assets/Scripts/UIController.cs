@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public NaturalResource dragableResource;
+
+    public Image filledBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +25,10 @@ public class UIController : MonoBehaviour
         dragableResource = GameController.instance.naturalResources[i];
         //dragableResource.spriteResource
 
+    }
+
+    public void CalculateProgress(){
+        float progress = 2.25f * MapController.instance.OnTilesRecovered();
+        filledBar.fillAmount = progress;
     }
 }

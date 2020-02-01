@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public List<NaturalResource> naturalResources;
 
+    
+
 
     public int money;
 
@@ -35,11 +37,5 @@ public class GameController : MonoBehaviour
         //resourcesBought.Add(newResource);
     }
 
-    public void CalculateProgress() {
-        float progress = 2.25f * MapController.instance.OnTilesRecovered();
-    }
 
-    public void CalculateHumidity() {
-
-    }
 }
