@@ -28,17 +28,17 @@ public class MapController : MonoBehaviour
 
     }
 
-    void OnCreateMap()
-    {
+    void OnCreateMap(){
 
         Vector3 sizeTile = tileGO.GetComponent<SpriteRenderer>().sprite.bounds.size;
         Vector3 tileVisualPosition; //esta es la variable que contiene la posición real en la pantalla
 
-        for (int i = 0; i < 15; i++)
+        Vector2 initWorld = Camera.main.ScreenToWorldPoint(new Vector3(initXpos, initYpos, 0.0f));
+        for (int j = 0; j < 15; j++)
         {
-            for (int j = 0; j < 15; j++)
+            for (int i = 0; i < 15; i++)
             {
-                tileVisualPosition = Camera.main.ScreenToWorldPoint(new Vector3(initXpos + i * sizeTile.x / 2, initYpos + j * sizeTile.y / 2, 0.0f));
+                tileVisualPosition = new Vector3(initWorld.x + i * sizeTile.x / 2, initWorld.y - j * sizeTile.y / 2, 0.0f);
                 tiles[i, j] = Instantiate(tileGO, tileVisualPosition, Quaternion.identity);//arreglar aquí posicionamiento
                 tiles[i, j].GetComponent<TileLogic>().OnInit(i, j);
 

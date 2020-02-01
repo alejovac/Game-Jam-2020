@@ -54,7 +54,8 @@ public class TileLogic : MonoBehaviour
         nutrients -= _resource.nutrients;
     }
 
-
+    public void OnRemoveResource(NaturalResource _resource) {
+    }
 
 
 }
