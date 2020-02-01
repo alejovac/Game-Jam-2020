@@ -108,4 +108,20 @@ public class MapController : MonoBehaviour
             InflueceRecursivity(x, y - 1, tileAlreadyInflueced, range - 1, totalRange, _resource);
         }
     }
+
+    public int OnTilesRecovered(){
+        int totalTilesRecovered = 0;
+        for (int i = 0; i < 15; i++){
+            for (int j = 0; j < 15; j++){
+                totalTilesRecovered += tiles[i, j].GetComponent<TileLogic>().recovered ? 1 : 0;
+            }
+        }
+        return totalTilesRecovered;
+    }
+
+    public void CalculateHumidity()
+    {
+
+    }
+
 }

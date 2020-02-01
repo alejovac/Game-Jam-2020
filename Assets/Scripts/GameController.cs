@@ -34,4 +34,12 @@ public class GameController : MonoBehaviour
         money += newResource.cost;
         //resourcesBought.Add(newResource);
     }
+
+    public void CalculateProgress() {
+        float progress = 2.25f * MapController.instance.OnTilesRecovered();
+    }
+
+    public void CalculateHumidity() {
+
+    }
 }
