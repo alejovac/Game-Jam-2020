@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{065DFB22-C159-4363-B503-E33870489267}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{065DFB22-C159-4363-B503-E33870489267}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{065DFB22-C159-4363-B503-E33870489267}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="plants_state" ID="{657A9F12-E3F5-4625-9E37-3DCEA7D197BB}">
+					<ChildrenList>
+						<State Name="None" ID="{5CDF2DF8-632E-4439-8165-D33DD92EADFC}"/>
+						<State Name="low" ID="{549DCC58-2B44-4344-B953-8350B75B34FE}"/>
+						<State Name="medium" ID="{F453263D-9B5E-4F4A-BF23-04E250A841A3}"/>
+						<State Name="high" ID="{445F4E6B-1C47-4481-B92E-8812157B6E2C}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="mx" ID="{AA3CC54B-DA13-46F7-8941-943CC98E5CAE}">
+					<ChildrenList>
+						<State Name="None" ID="{61C3E283-4BE6-41B4-8FE6-1E8DCE01AB64}"/>
+						<State Name="mute_mx" ID="{E528D321-048A-4934-93B0-16501B51BFB0}"/>
+						<State Name="unmute_mx" ID="{2AAE7BCE-1960-4CFE-8F7D-F3C8094AAF40}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="fx" ID="{BA59D99D-E83D-49A2-9768-1EDCE6AA1EF0}">
+					<ChildrenList>
+						<State Name="None" ID="{CA8BE90B-10A0-418C-AE42-6CB826A5720C}"/>
+						<State Name="mute_sfx" ID="{B6389667-2F92-45F9-8701-D872BA104ECA}"/>
+						<State Name="unmute_sfx" ID="{6CC90BE8-0BFA-467C-B21C-A0402312CFE6}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="game" ID="{099C53E9-9D59-4D5A-9177-729AD80DC4FA}">
+					<ChildrenList>
+						<State Name="None" ID="{779968EA-AA8A-4C45-8A1C-99CC9565AEEB}"/>
+						<State Name="ingame" ID="{AB25EAA2-D038-43EC-890E-38E846ADF195}"/>
+						<State Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

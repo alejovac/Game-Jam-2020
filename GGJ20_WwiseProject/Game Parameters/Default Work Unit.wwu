@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FB295651-6092-4E12-8023-A3B273BEA091}" SchemaVersion="94">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{FB295651-6092-4E12-8023-A3B273BEA091}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FB295651-6092-4E12-8023-A3B273BEA091}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="humidity" ID="{EA942FC0-57B7-4F66-82AF-A044F052C009}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="volume_mx" ID="{C038795F-CA75-4CF9-8102-9913DA68CF93}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="volume_fx" ID="{BEBBE9CE-231F-4ED6-8EFF-53B8A936CB13}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

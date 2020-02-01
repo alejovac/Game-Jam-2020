@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="player_buy" ID="{263B8BB4-27EF-42D6-BF64-F53F36EC387C}">
+				<Event Name="pl_buy" ID="{263B8BB4-27EF-42D6-BF64-F53F36EC387C}">
 					<ChildrenList>
 						<Action Name="" ID="{733404A8-87B1-452F-B0C3-B6F7EF75B65E}" ShortID="494642471">
 							<ReferenceList>
@@ -14,12 +14,142 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="player_sell" ID="{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}">
+				<Event Name="pl_sell" ID="{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}">
 					<ChildrenList>
 						<Action Name="" ID="{F3A4A9E1-573F-41A6-AE96-A4570B703404}" ShortID="249189418">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sell" ID="{00E8B2F9-B4E8-4E9B-A6EA-DFCCB88AE0DC}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pl_plant_add" ID="{B561DBC2-7223-446C-BC0E-E788C1CAF99E}">
+					<ChildrenList>
+						<Action Name="" ID="{818B8071-4B94-4137-B801-35DE44520630}" ShortID="444683750">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plant_add" ID="{B4EFA1E3-7CD8-4BCD-AF68-F3C06EFB7FA6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pl_plant_remove" ID="{0C6A8501-CD5D-4336-9208-F633F09DAC0B}">
+					<ChildrenList>
+						<Action Name="" ID="{595C0B66-53F0-44CF-8B41-30666A4A9974}" ShortID="45708576">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plant_remove" ID="{01B19537-6B72-4500-8953-3E1DB44D26AB}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="game_start" ID="{ECCC2025-0408-4214-999E-B79C4F37C682}">
+					<ChildrenList>
+						<Action Name="" ID="{A11AA783-F86C-492C-8DC8-23487116F618}" ShortID="973435880">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music" ID="{C2C3BA58-CA9F-4B80-BEB6-EE2C2CD2DD66}" WorkUnitID="{AC9937EC-86C2-4B37-A6F2-0D8006D02089}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E072C231-7422-4A55-8611-B9289EB16FD0}" ShortID="272386878">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience" ID="{FEE5491A-6EE0-4D32-A11D-AC0FF698B2A5}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2EC03C36-4156-4E3D-8AB1-066F9A3BC055}" ShortID="452067962">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{27DEC4AD-2794-471C-A5D9-9DE9F71BB17D}" ShortID="328362280">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}" WorkUnitID="{065DFB22-C159-4363-B503-E33870489267}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}">
+					<ChildrenList>
+						<Action Name="" ID="{B92EF7A2-B62D-4734-ABA0-A473018DB81F}" ShortID="564622500">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3BD9B59F-905B-4F2F-9DFB-EB76A1FB4AA5}" ShortID="1050430250">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{960155F8-4214-4348-9C99-3D5F9666C12D}" ShortID="557345121">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ingame" ID="{AB25EAA2-D038-43EC-890E-38E846ADF195}" WorkUnitID="{065DFB22-C159-4363-B503-E33870489267}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}">
+					<ChildrenList>
+						<Action Name="" ID="{19CA6656-E8AD-4C17-9031-99D77B994B71}" ShortID="937518772">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A4563873-381C-4A46-8272-8307BE54B0C4}" ShortID="1037321203">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}" WorkUnitID="{065DFB22-C159-4363-B503-E33870489267}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{58FF96C8-2779-4070-9FD1-4EA1890CA199}" ShortID="577614764">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

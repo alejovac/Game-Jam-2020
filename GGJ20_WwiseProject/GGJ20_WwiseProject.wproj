@@ -9179,6 +9179,15 @@
 				<PhysicalFolder Path="SoundBanks">
 					<WorkUnit Name="SoundBanks" ID="{C98E673F-A24C-48A8-960F-10565FFE70A0}" PersistMode="Standalone"/>
 				</PhysicalFolder>
+				<PhysicalFolder Path="SoundBanks\Linux">
+					<WorkUnit Name="Linux" ID="{4CA14516-926E-421F-A253-946BE50D906E}" PersistMode="Standalone"/>
+				</PhysicalFolder>
+				<PhysicalFolder Path="SoundBanks\Mac">
+					<WorkUnit Name="Mac" ID="{6B320ED0-5CFA-4BCC-B324-F5E2B01654D0}" PersistMode="Standalone"/>
+				</PhysicalFolder>
+				<PhysicalFolder Path="SoundBanks\Windows">
+					<WorkUnit Name="Windows" ID="{33E305ED-E7C5-4946-8E3A-34B8AE52EB6A}" PersistMode="Standalone"/>
+				</PhysicalFolder>
 				<PhysicalFolder Path="Soundcaster Sessions">
 					<WorkUnit Name="Soundcaster Sessions" ID="{4C96B38B-3DB4-40C7-91C9-665510E38993}" PersistMode="Standalone"/>
 				</PhysicalFolder>

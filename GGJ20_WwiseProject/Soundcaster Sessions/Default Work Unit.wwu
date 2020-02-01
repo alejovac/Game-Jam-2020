@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{52CF18AB-FA42-454F-B6C9-3B5873285874}" SchemaVersion="94">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{52CF18AB-FA42-454F-B6C9-3B5873285874}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{52CF18AB-FA42-454F-B6C9-3B5873285874}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="GGJ20" ID="{ECCF1BD1-15B8-4EB8-97AF-04049ED46C1D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="game_start" ID="{ECCC2025-0408-4214-999E-B79C4F37C682}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ui_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ui_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pl_buy" ID="{263B8BB4-27EF-42D6-BF64-F53F36EC387C}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pl_sell" ID="{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pl_plant_add" ID="{B561DBC2-7223-446C-BC0E-E788C1CAF99E}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pl_plant_remove" ID="{0C6A8501-CD5D-4336-9208-F633F09DAC0B}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="volume_mx" ID="{C038795F-CA75-4CF9-8102-9913DA68CF93}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="volume_fx" ID="{BEBBE9CE-231F-4ED6-8EFF-53B8A936CB13}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="humidity" ID="{EA942FC0-57B7-4F66-82AF-A044F052C009}"/>
+							<Value>17</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

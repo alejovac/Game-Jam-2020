@@ -9,7 +9,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+							<ObjectRef Name="SFX" ID="{81BE8058-0E43-4045-BBC5-5FF98085719E}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -23,13 +23,13 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="player_buy" ID="{AAEEEE95-4456-4563-8D66-44F021A1AC00}" ShortID="300398778">
+								<AudioFileSource Name="pl_buy" ID="{6EC8D303-0985-4B5D-9E71-B5C6A32FA5C0}" ShortID="862211857">
 									<Language>SFX</Language>
-									<AudioFile>player_buy.wav</AudioFile>
+									<AudioFile>pl_buy.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="player_buy" ID="{AAEEEE95-4456-4563-8D66-44F021A1AC00}" Platform="Linked"/>
+								<ActiveSource Name="pl_buy" ID="{6EC8D303-0985-4B5D-9E71-B5C6A32FA5C0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sell" ID="{00E8B2F9-B4E8-4E9B-A6EA-DFCCB88AE0DC}" ShortID="965817492">
@@ -65,6 +65,15 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="pl_plant_add" ID="{34CA8633-9394-4130-B0A7-082390100873}" ShortID="802016425">
+									<Language>SFX</Language>
+									<AudioFile>pl_plant_add.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="pl_plant_add" ID="{34CA8633-9394-4130-B0A7-082390100873}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="plant_remove" ID="{01B19537-6B72-4500-8953-3E1DB44D26AB}" ShortID="754701377">
 							<ReferenceList>
@@ -75,7 +84,1146 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="pl_plant_remove" ID="{C4D28C54-28FC-4E5D-9947-4CA5D74A166B}" ShortID="282203533">
+									<Language>SFX</Language>
+									<AudioFile>pl_plant_remove.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="pl_plant_remove" ID="{C4D28C54-28FC-4E5D-9947-4CA5D74A166B}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="ambience" ID="{D4888009-6829-48C9-8CB8-4DC62DE9923D}" ShortID="960227244">
+					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{81BE8058-0E43-4045-BBC5-5FF98085719E}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="ambience" ID="{FEE5491A-6EE0-4D32-A11D-AC0FF698B2A5}" ShortID="440978483">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{F283E46C-2C46-4C96-9167-A42CBA302BBD}" ShortID="644986662">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{7E6B506B-3592-4425-99F6-CA44DBB6F39F}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="crickets" ID="{BCAF6279-9B8D-4F21-838C-73174BD59B5B}" ShortID="69458420">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{FDBBDB9A-FCC3-49B2-91E7-46625CB5D874}" ShortID="1052150890">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{8341AAE6-259D-4434-B49F-4FFA9045E553}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>30.56338</XPos>
+																<YPos>-0.86528</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>54.08451</XPos>
+																<YPos>-1.42101</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>61.97183</XPos>
+																<YPos>-3.36363</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-8.04113</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="amb_wind_cricket_1" ID="{D71CA160-700E-42A8-B5AD-060B0544A1AD}" ShortID="757709035">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_1" ID="{6E387490-A4D9-42A3-B790-E966E05EBB58}" ShortID="818657309">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_1" ID="{6E387490-A4D9-42A3-B790-E966E05EBB58}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_2" ID="{E5B74E0E-58ED-4BDB-8549-E0D506827F7F}" ShortID="584093696">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_2" ID="{E12A6A73-F284-4EA7-8057-BD1E39C833D2}" ShortID="138813714">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_2" ID="{E12A6A73-F284-4EA7-8057-BD1E39C833D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_3" ID="{3D365F91-1CA5-408A-9521-ACD6A24BE9BF}" ShortID="177369118">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_3" ID="{6835D120-D32A-400D-89E8-104C6F84FE8E}" ShortID="726572063">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_3" ID="{6835D120-D32A-400D-89E8-104C6F84FE8E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_4" ID="{5B2EE54E-1593-4FC3-9BCA-E6ABC7A24754}" ShortID="482485525">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_4" ID="{EE832007-7F03-4D24-8DF6-FCEA6586272B}" ShortID="599904609">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_4" ID="{EE832007-7F03-4D24-8DF6-FCEA6586272B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_5" ID="{A0D6DFC5-59EC-409C-8D33-7D8B84BC7673}" ShortID="1018385630">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_5" ID="{D8F470DA-74C8-46B4-A531-20FDFBB3C540}" ShortID="43601106">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_5" ID="{D8F470DA-74C8-46B4-A531-20FDFBB3C540}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_6" ID="{AC4E17A4-AE0E-4F33-A2FA-CFD4E2A1845D}" ShortID="228063961">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_6" ID="{5052E755-3934-433C-A947-8AC6876CCF1D}" ShortID="721780477">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_6" ID="{5052E755-3934-433C-A947-8AC6876CCF1D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_wind_cricket_7" ID="{E6285DDC-3F46-41D4-B80D-E48385D1BF9E}" ShortID="414714785">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_wind_cricket_7" ID="{F4A1C6D4-C066-47A0-B6CD-F668D839E3E8}" ShortID="33480405">
+													<Language>SFX</Language>
+													<AudioFile>amb_wind_cricket_7.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_wind_cricket_7" ID="{F4A1C6D4-C066-47A0-B6CD-F668D839E3E8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="frogs" ID="{782C7760-42C2-4D4B-8577-FA977F8235CF}" ShortID="586869293">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{286ECD09-1DA9-4E66-BACC-ED2A54130BFB}" ShortID="550577823">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{2759C736-2737-4739-A39E-172176A91A69}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-20.25674</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>38.4507</XPos>
+																<YPos>-4.356</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>60.70423</XPos>
+																<YPos>-3.86031</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>89.15493</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+												<RTPC Name="" ID="{093DA285-F2E9-4C1F-9B86-C683D8AF2D89}" ShortID="784240726">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="humidity" ID="{EA942FC0-57B7-4F66-82AF-A044F052C009}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{6EAD6635-AED7-431A-906B-B8E02130DCE2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="amb_frogs_1" ID="{5C0E2D2F-418F-4D91-8DFF-975AB9704956}" ShortID="974330487">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_1" ID="{084DB2E6-2034-41BE-B250-A55B59FAD632}" ShortID="1023044921">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_1" ID="{084DB2E6-2034-41BE-B250-A55B59FAD632}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_frogs_2" ID="{BB063520-AFA9-4B89-956D-3D602B525E81}" ShortID="58694075">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_2" ID="{184BEF08-3594-4110-B117-8E26EF465223}" ShortID="798247170">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_2" ID="{184BEF08-3594-4110-B117-8E26EF465223}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_frogs_3" ID="{68EABB79-BB4E-425E-8F15-8ED971E3C1F5}" ShortID="443505630">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_3" ID="{8340ABEA-9961-4204-B077-3E6C264FA0B6}" ShortID="830568659">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_3" ID="{8340ABEA-9961-4204-B077-3E6C264FA0B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_frogs_4" ID="{17F162C6-EBBB-4CC3-A990-6A4941DD0169}" ShortID="608105133">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_4" ID="{8D1143FA-7B89-4D4E-89EE-38540FFCB9AB}" ShortID="10387466">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_4" ID="{8D1143FA-7B89-4D4E-89EE-38540FFCB9AB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_frogs_5" ID="{62C5449E-5F85-4993-B4A2-3D8F907AD4EC}" ShortID="1018595927">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_5" ID="{C26F735D-3D88-46F2-8964-384F5B7E4CA6}" ShortID="234448968">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_5" ID="{C26F735D-3D88-46F2-8964-384F5B7E4CA6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="amb_frogs_6" ID="{1CCBD2DF-F608-40B9-A333-52C36B1119EA}" ShortID="362982901">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb_frogs_6" ID="{64D939E6-2620-4429-BB63-77C0487202CA}" ShortID="134248617">
+													<Language>SFX</Language>
+													<AudioFile>amb_frogs_6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="amb_frogs_6" ID="{64D939E6-2620-4429-BB63-77C0487202CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="birds" ID="{36FB3F71-96B4-4CD3-92F4-C76355A02A40}" ShortID="875270566">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{B350778B-D5F1-401E-BCF0-1A6324657E93}" ShortID="1009376495">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{354BAF91-A981-4589-BD28-BA8A2F236D35}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>49.29577</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>65.35211</XPos>
+																<YPos>-5.30269</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-001" ID="{3FE5618D-F5A3-4BD3-8C03-A74B58A309AF}" ShortID="216978888">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-001" ID="{FC3195AC-D43A-4950-A0AA-6DEB823BBB43}" ShortID="931711870">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-001.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-001" ID="{FC3195AC-D43A-4950-A0AA-6DEB823BBB43}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-002" ID="{FDE9FA2E-01B3-44B1-88CA-8F9D8602D399}" ShortID="311879609">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-002" ID="{538D5150-A6E8-4FFE-B541-20BA8E461A52}" ShortID="772319478">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-002.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-002" ID="{538D5150-A6E8-4FFE-B541-20BA8E461A52}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-003" ID="{9A766C30-B92B-4B3C-A3C8-B2C651336AFF}" ShortID="421990974">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-003" ID="{262A3973-97D8-4A79-A9BA-B4A706A942A6}" ShortID="873593559">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-003.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-003" ID="{262A3973-97D8-4A79-A9BA-B4A706A942A6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-004" ID="{1B50E1CC-5917-4BD0-A681-27A9A3785298}" ShortID="705829016">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-004" ID="{AB17EA74-4D12-457A-93A2-C3BF0347A1E6}" ShortID="625548458">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-004.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-004" ID="{AB17EA74-4D12-457A-93A2-C3BF0347A1E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-005" ID="{AFD62A1E-F5E8-4D88-B70E-C4471D09E60C}" ShortID="984303896">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-005" ID="{FA52C65B-B58A-4FCE-872A-35809A30A616}" ShortID="182583509">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-005.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-005" ID="{FA52C65B-B58A-4FCE-872A-35809A30A616}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-006" ID="{3985C55E-8804-4C64-B5E2-309A53D02008}" ShortID="891962328">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-006" ID="{D71F6A36-BB89-4B09-A854-14CDB92A82CC}" ShortID="322361551">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0048 Deciduous forest morning songbirds woodpeckers-006.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0048 Deciduous forest morning songbirds woodpeckers-006" ID="{D71F6A36-BB89-4B09-A854-14CDB92A82CC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="game" ID="{099C53E9-9D59-4D5A-9177-729AD80DC4FA}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="ingame" ID="{AB25EAA2-D038-43EC-890E-38E846ADF195}"/>
+										<CustomState Name="" ID="{A615FD94-0EF8-4B9B-B81D-1069E3E17D4B}" ShortID="632997410"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}"/>
+										<CustomState Name="" ID="{208A1EEE-918D-4BB9-B022-AF2745B4FBBC}" ShortID="100677758">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="29"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</BlendContainer>
+						<BlendContainer Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" ShortID="583463868">
+							<PropertyList>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="wind_moderate" ID="{338C84B3-6536-49E4-8838-DF6ABDF8FB2B}" ShortID="933660796">
+									<PropertyList>
+										<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{81BE8058-0E43-4045-BBC5-5FF98085719E}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-001" ID="{B1EA493B-B9E4-46D0-9D94-2E9AEF465ED2}" ShortID="1058874625">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-001" ID="{798A1EBE-0D09-4E14-8740-53B5B99A446A}" ShortID="283140523">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-001.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-001" ID="{798A1EBE-0D09-4E14-8740-53B5B99A446A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-002" ID="{989FCAB5-8564-48DD-89EF-4B94A9721ED5}" ShortID="865368972">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-002" ID="{4657AF36-CD17-460C-B37E-661FF76F663D}" ShortID="522179966">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-002.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-002" ID="{4657AF36-CD17-460C-B37E-661FF76F663D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-003" ID="{61BD39F1-93A4-4DF0-B11B-A081735540D0}" ShortID="973014014">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-003" ID="{82A658C7-890F-4188-8B1A-8C3BD1497C06}" ShortID="766151503">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-003.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-003" ID="{82A658C7-890F-4188-8B1A-8C3BD1497C06}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-004" ID="{15EAC037-3A83-44A5-B35E-AC65BEB69CBD}" ShortID="558145076">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-004" ID="{D6035DD4-4F08-44FA-9CC8-4D86A4850842}" ShortID="52920791">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-004.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-004" ID="{D6035DD4-4F08-44FA-9CC8-4D86A4850842}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-005" ID="{5BBCE2B7-DE34-4174-A5C4-86FD01044A6F}" ShortID="760025298">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-005" ID="{BC23B7C7-7918-4B12-AEEE-C4DEB3BCA796}" ShortID="1025423798">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-005.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-005" ID="{BC23B7C7-7918-4B12-AEEE-C4DEB3BCA796}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-006" ID="{94CD55D1-7C25-4278-8B21-7A1CA6FE66E7}" ShortID="320821697">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-006" ID="{A54FEF4A-7976-4969-952F-9349C44A0081}" ShortID="110795514">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-006.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-006" ID="{A54FEF4A-7976-4969-952F-9349C44A0081}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1057 Wetlands marsh day wind 5_0-007" ID="{85C656EB-DB60-4C10-89B9-CFF0334AE52F}" ShortID="344168437">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1057 Wetlands marsh day wind 5_0-007" ID="{9E1C028E-2D8D-499C-A331-21D2D221FEDB}" ShortID="581682740">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1057 Wetlands marsh day wind 5.0-007.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1057 Wetlands marsh day wind 5_0-007" ID="{9E1C028E-2D8D-499C-A331-21D2D221FEDB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="wind_soft" ID="{D180FE17-A413-4591-8CFC-54F63E8DF0BF}" ShortID="488916820">
+									<PropertyList>
+										<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="1.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{81BE8058-0E43-4045-BBC5-5FF98085719E}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="QP01 0002 Wind mod soft-001" ID="{41EDD1DF-321F-490E-9AEA-E1EC3C6C9A44}" ShortID="440029940">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0002 Wind mod soft-001" ID="{FDB7DD11-3020-4BE5-A8FA-6CE3A2B95934}" ShortID="753065309">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0002 Wind mod soft-001.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0002 Wind mod soft-001" ID="{FDB7DD11-3020-4BE5-A8FA-6CE3A2B95934}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0002 Wind mod soft-002" ID="{8B6A03E9-3439-45E0-AB51-E0A8F3F9AF4F}" ShortID="187700100">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0002 Wind mod soft-002" ID="{A367C566-768E-4A7C-82C4-AC3D3138FC7C}" ShortID="993533427">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0002 Wind mod soft-002.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0002 Wind mod soft-002" ID="{A367C566-768E-4A7C-82C4-AC3D3138FC7C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0002 Wind mod soft-003" ID="{DC712EB7-F8C6-4C9B-A454-67CC4645BA56}" ShortID="654239437">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0002 Wind mod soft-003" ID="{025D49CF-9DDC-4E28-8ED2-BE5A1D97B085}" ShortID="466980363">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0002 Wind mod soft-003.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0002 Wind mod soft-003" ID="{025D49CF-9DDC-4E28-8ED2-BE5A1D97B085}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0002 Wind mod soft-004" ID="{C5B8E36A-C6A7-42FD-8B05-550E4C9CAD48}" ShortID="478863881">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0002 Wind mod soft-004" ID="{3630FF36-C13C-4EA0-9FA5-82F5379C61FC}" ShortID="663243119">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0002 Wind mod soft-004.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0002 Wind mod soft-004" ID="{3630FF36-C13C-4EA0-9FA5-82F5379C61FC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP01 0002 Wind mod soft-005" ID="{9C265741-8124-4F4C-8871-BBF701A72884}" ShortID="465912843">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP01 0002 Wind mod soft-005" ID="{B99BA371-38BA-46B8-9251-252E1E04485B}" ShortID="692723034">
+													<Language>SFX</Language>
+													<AudioFile>QP01 0002 Wind mod soft-005.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP01 0002 Wind mod soft-005" ID="{B99BA371-38BA-46B8-9251-252E1E04485B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="foliage" ID="{3AF2CA9B-8DF9-4F4C-B51D-FAE7A8C0F68A}" ShortID="159572429">
+									<PropertyList>
+										<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{81BE8058-0E43-4045-BBC5-5FF98085719E}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-001" ID="{003107B9-5EEB-4B13-9F30-0CFCED673397}" ShortID="812027326">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-001" ID="{D145AE70-1C20-42EC-9AA4-9E39026859A1}" ShortID="836575082">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-001.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-001" ID="{D145AE70-1C20-42EC-9AA4-9E39026859A1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-002" ID="{BD4F5015-2EFC-4495-BCA4-BB7B87E42D33}" ShortID="832191696">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-002" ID="{ECA3DBCD-17D6-4989-9F26-6B0042E12F42}" ShortID="559957005">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-002.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-002" ID="{ECA3DBCD-17D6-4989-9F26-6B0042E12F42}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-003" ID="{18E88F78-C9C4-4F1D-BB4F-5D48D5204A2A}" ShortID="388705037">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-003" ID="{9186AA1F-A308-4835-B26B-4EEEB5A8ABFE}" ShortID="510282522">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-003.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-003" ID="{9186AA1F-A308-4835-B26B-4EEEB5A8ABFE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-004" ID="{456CFD46-E863-4B3C-90F4-7469FBC804AF}" ShortID="205480917">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-004" ID="{4F6E294C-F1EF-44D2-9B5C-31D2400B91EA}" ShortID="1054539632">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-004.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-004" ID="{4F6E294C-F1EF-44D2-9B5C-31D2400B91EA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-005" ID="{129F7548-E9B8-4F3C-8CAB-29F0C6277F56}" ShortID="597987454">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-005" ID="{5415B545-BF8F-420E-A14F-27EC211DABEF}" ShortID="976274455">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-005.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-005" ID="{5415B545-BF8F-420E-A14F-27EC211DABEF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="QP09 1081 Wetlands springs desert day wind 5_0-006" ID="{5E3600FB-E8FD-4D23-B921-B6A178C27DAD}" ShortID="202247440">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="QP09 1081 Wetlands springs desert day wind 5_0-006" ID="{3190A9E1-D155-4F6F-92A4-0E7698D7A125}" ShortID="533054948">
+													<Language>SFX</Language>
+													<AudioFile>QP09 1081 Wetlands springs desert day wind 5.0-006.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="QP09 1081 Wetlands springs desert day wind 5_0-006" ID="{3190A9E1-D155-4F6F-92A4-0E7698D7A125}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="Wildlife" ID="{485B66A9-9773-4350-B8D2-B2B01DB16CB4}" ShortID="82493288">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="wind_soft" ID="{D180FE17-A413-4591-8CFC-54F63E8DF0BF}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>35.3961021039604</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="wind_moderate" ID="{338C84B3-6536-49E4-8838-DF6ABDF8FB2B}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>11.9081283690869</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>78.451313909516</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="foliage" ID="{3AF2CA9B-8DF9-4F4C-B51D-FAE7A8C0F68A}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>52.7227097772277</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

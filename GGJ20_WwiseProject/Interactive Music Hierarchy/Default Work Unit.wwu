@@ -1,6 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AC9937EC-86C2-4B37-A6F2-0D8006D02089}" SchemaVersion="94">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{AC9937EC-86C2-4B37-A6F2-0D8006D02089}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AC9937EC-86C2-4B37-A6F2-0D8006D02089}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="music" ID="{C2C3BA58-CA9F-4B80-BEB6-EE2C2CD2DD66}" ShortID="272344626">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="100"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MX" ID="{DF34E803-92D9-4F01-A080-5C672683E873}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="GGJ Loop Theme" ID="{D26A7074-C0C3-406F-950D-CB4A590E2969}" ShortID="638425869">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="71672.1995464853"/>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="80"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="5"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{22AB1CA1-7E86-4606-81D6-EBBA8053E959}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="GGJ Loop Theme" ID="{F0CBF0A5-3112-4E03-BFC6-EC0D401F4D4D}" ShortID="897609248">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{358AF538-0D9E-442C-95F9-938B4D9F7CC1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GGJ Loop Theme" ID="{0E5B3631-2418-4663-9BFD-7EBDEB9BCF4E}" ShortID="941654147">
+											<Language>SFX</Language>
+											<AudioFile>GGJ Loop Theme.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{C2E00B83-5C6C-4A73-BEEE-39325246610C}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{DE79CCE9-1AD6-4221-AA64-04DFD3495E53}">
+											<ClipList>
+												<MusicClip Name="GGJ Loop Theme" ID="{3A83558F-16A2-4BCE-88B3-7D17FBD0B92A}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="500"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="61672.1995464853"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-500"/>
+													</PropertyList>
+													<AudioSourceRef Name="GGJ Loop Theme" ID="{0E5B3631-2418-4663-9BFD-7EBDEB9BCF4E}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{305451FC-5B93-4F98-9C37-D3361F66FBC3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.5</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>61.6722</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{8A6A1C68-49A0-4BF6-A251-E5820A2199A8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.5</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>61.6722</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{4AA99AD5-3D6A-44BA-8723-57BA420E4E43}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.5</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>61.6722</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{C8299C9F-0D4F-4087-93DB-C1EB2B6E40B6}"/>
+								<MusicCue Name="Exit Cue" ID="{99748285-23A9-4D80-835D-9BF961BEBC77}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="58500"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{7BCD3FA7-EC23-40A9-AAAA-5EA6F1AF930D}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{0597FF0D-8DAD-44BB-A0B5-DD632D90EBFE}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{746CE5DD-5200-4D7F-AD55-5F3AF7966533}" ShortID="425995411">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{93A8027E-4D3C-4807-87F3-1B743DF5C97C}" ShortID="613651071">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="GGJ Loop Theme" ID="{D26A7074-C0C3-406F-950D-CB4A590E2969}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
