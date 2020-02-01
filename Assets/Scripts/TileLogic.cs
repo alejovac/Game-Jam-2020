@@ -40,7 +40,10 @@ public class TileLogic : MonoBehaviour
     }
 
     public bool OnApplyResource(NaturalResource _resource) {
-        if (_resource.CheckTerrain(this)){
+        print("Aplico");
+        if (_resource.CheckTerrain(this))
+        {
+            print("Funciono");
             resource = _resource;
             recovered = true;
             return true;
