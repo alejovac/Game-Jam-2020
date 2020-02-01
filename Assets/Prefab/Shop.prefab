@@ -353,7 +353,7 @@ MonoBehaviour:
   rangeAction: 5
   cost: 300
   rangeHealing: 1
-  luminosityNeeded: {x: 1, y: 7}
+  luminosityNeeded: {x: 1, y: 10}
   humidityNeeded: {x: 3, y: 10}
   luminosity: -3
   humidity: -2

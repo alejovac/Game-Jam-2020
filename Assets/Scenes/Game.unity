@@ -492,21 +492,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5814118379364114200, guid: ace293699daede04bae452f031421d5d,
-        type: 3}
-      propertyPath: m_TagString
-      value: ShopTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814118379364114206, guid: ace293699daede04bae452f031421d5d,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814118379364114206, guid: ace293699daede04bae452f031421d5d,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5814118381224636993, guid: ace293699daede04bae452f031421d5d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,16 +546,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814118381224636993, guid: ace293699daede04bae452f031421d5d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5814118381224636993, guid: ace293699daede04bae452f031421d5d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5814118381224636994, guid: ace293699daede04bae452f031421d5d,
         type: 3}
@@ -783,7 +758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14846836, y: 0.9207396}
   m_AnchorMax: {x: 0.39982703, y: 0.96500003}
-  m_AnchoredPosition: {x: 0.38347, y: -0.056458}
+  m_AnchoredPosition: {x: 0.38346863, y: -0.05645752}
   m_SizeDelta: {x: 0.71309996, y: -0.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1626619501
@@ -972,7 +947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1908743686
 RectTransform:
   m_ObjectHideFlags: 0

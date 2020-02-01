@@ -9,6 +9,7 @@ public class TileLogic : MonoBehaviour
     public int nutrients;
 
     public bool recovered;
+    public MapController map;
 
     int logicPosX;
     int logicPosY;
@@ -36,16 +37,24 @@ public class TileLogic : MonoBehaviour
         humidity = Random.Range(0, 10);
         nutrients = Random.Range(0, 10);
         recovered = false;
+    }
 
+    public void OnInit(int x, int y, int luminosity, int humidity, int nutrients)
+    {
+        logicPosX = x;
+        logicPosY = y;
+        this.luminosity = luminosity;
+        this.humidity   = humidity;
+        this.nutrients  = nutrients;
+        recovered = false;
     }
 
     public bool OnApplyResource(NaturalResource _resource) {
         print("Aplico");
-        if (_resource.CheckTerrain(this))
+        if (map.OnApplyResource(logicPosX, logicPosY, _resource))
         {
             print("Funciono");
             resource = _resource;
-            recovered = true;
             return true;
         }
         else return false;

@@ -12,9 +12,7 @@ public class MapController : MonoBehaviour
     static int height = 15;
     GameObject[,] tiles = new GameObject[width, height];
 
-
     public GameObject tileGO;
-
 
     // Start is called before the first frame update
     void Start()
@@ -47,19 +45,20 @@ public class MapController : MonoBehaviour
         {
             for (int i = 0; i < totalTiles; i++)
             {
-                var screenPos = new Vector3
-                    (
-                        initWorld.x + i * sizeTile.x,
-                        initWorld.y + (totalTiles - 1.0f - j) * sizeTile.y,
-                        0.0f
-                    );
+                var screenPos = new Vector3(
+                    initWorld.x + i * sizeTile.x,
+                    initWorld.y + (totalTiles - 1.0f - j) * sizeTile.y,
+                    0.0f
+                );
 
                 tileVisualPosition = (screenPos);
                 tileVisualPosition += offset;
                 tileVisualPosition.z = 0.0f;
 
                 tiles[i, j] = Instantiate(tileGO, tileVisualPosition, Quaternion.identity);//arreglar aquí posicionamiento
-                tiles[i, j].GetComponent<TileLogic>().OnInit(i, j);
+                TileLogic logic = tiles[i, j].GetComponent<TileLogic>();
+                logic.map = this;
+                InitRiver(logic, i, j);
                 tiles[i, j].transform.SetParent(this.transform);
 
                 tiles[i, j].name = string.Format("tile {0}, {1}", i, j);
@@ -67,26 +66,91 @@ public class MapController : MonoBehaviour
         }
     }
 
-    void OnApplyResource(int x, int y, NaturalResource _resource)
+    void InitRandom(TileLogic logic, int x ,int y)
     {
+        logic.OnInit(x, y);
+    }
 
-        if (tiles[x, y].GetComponent<TileLogic>().OnApplyResource(_resource))
+    void InitRiver(TileLogic logic, int x, int y)
+    {
+        int food = 8;
+        int light = 9;
+        int water = Mathf.Clamp(10 - Mathf.Abs(x - y), 0, 10);
+
+        logic.OnInit(x, y, light, water, food);
+    }
+
+    void InitCoast(TileLogic logic, int x, int y)
+    {
+        int food = 10;
+        int light = 8;
+        int water = Mathf.Clamp(10 - x / 2, 0, 10);
+
+        logic.OnInit(x, y, light, water, food);
+    }
+
+    public bool OnApplyResource(int x, int y, NaturalResource _resource)
+    {
+        TileLogic tile = tiles[x, y].GetComponent<TileLogic>();
+        if (_resource.CheckTerrain(tile))
         {
-            if (_resource.typeShape == NaturalResource.shapeAction.sphere)
+            ApplyResourseEffect(_resource, x, y);
+            //if (_resource.typeShape == NaturalResource.shapeAction.sphere)
+            //{
+            //    var range = _resource.rangeAction;
+            //
+            //    List<Vector2> tileAlreadyInflueced = new List<Vector2>();
+            //    tileAlreadyInflueced.Add(new Vector2(x, y));
+            //
+            //    for (int i = 0; i < range; i++)
+            //    {
+            //
+            //    }
+            //
+            //}
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    void ApplyResourseEffect(NaturalResource resource, int x, int y)
+    {
+        for (int xx = -resource.rangeAction; xx < resource.rangeAction; xx++)
+        {
+            for (int yy = -resource.rangeAction; yy < resource.rangeAction; yy++)
             {
-                var range = _resource.rangeAction;
-
-                List<Vector2> tileAlreadyInflueced = new List<Vector2>();
-                tileAlreadyInflueced.Add(new Vector2(x, y));
-
-                for (int i = 0; i < range; i++)
+                bool xValid = x + xx >= 0 && x + xx < 15;
+                bool yValid = y + yy >= 0 && y + yy < 15;
+                bool inRange = Mathf.Abs(xx) + Mathf.Abs(yy) <= resource.rangeAction;
+                if (xValid && yValid && inRange && (xx != 0 || yy != 0))
                 {
-
+                    TileLogic currTile = tiles[x+xx, y+yy].GetComponent<TileLogic>();
+                    currTile.luminosity += resource.luminosity;
+                    currTile.humidity += resource.humidity;
+                    currTile.nutrients += resource.nutrients;
                 }
-
             }
         }
 
+        for (int xx = -resource.rangeHealing; xx < resource.rangeHealing; xx++)
+        {
+            for (int yy = -resource.rangeHealing; yy < resource.rangeHealing; yy++)
+            {
+                bool xValid = x + xx >= 0 && x + xx < 15;
+                bool yValid = y + yy >= 0 && y + yy < 15;
+                bool inRange = Mathf.Abs(xx) + Mathf.Abs(yy) < resource.rangeHealing;
+                if (xValid && yValid && inRange)
+                {
+                    TileLogic currTile = tiles[x+xx, y+yy].GetComponent<TileLogic>();
+                    currTile.recovered = true;
+                }
+            }
+        }
     }
 
     void InflueceRecursivity(int x, int y, List<Vector2> tileAlreadyInflueced, int range, int totalRange, NaturalResource _resource)
