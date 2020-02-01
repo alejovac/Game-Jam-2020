@@ -8,7 +8,7 @@ public class TileLogic : MonoBehaviour
     public int humidity;
     public int nutrients;
 
-    bool recovered;
+    public bool recovered;
 
     int logicPosX;
     int logicPosY;
