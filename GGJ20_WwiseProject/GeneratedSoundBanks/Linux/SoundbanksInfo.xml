@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/.cache/Linux/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/GeneratedSoundBanks/Linux/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/maty64/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GGJ20/GGJ20_WwiseProject/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2182974741" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\GGJ20</ObjectPath>
+			<ShortName>GGJ20</ShortName>
+			<Path>GGJ20.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1138681371" Name="player_buy" ObjectPath="\Events\Default Work Unit\player_buy" DurationType="OneShot" DurationMin="0.555562" DurationMax="0.555562"/>
+				<Event Id="3409090725" Name="player_sell" ObjectPath="\Events\Default Work Unit\player_sell" DurationType="OneShot" DurationMin="0.509250" DurationMax="0.509250"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="300398778" Language="SFX">
+					<ShortName>player_buy.wav</ShortName>
+					<Path>SFX/player_buy_10C4C929.wem</Path>
+				</File>
+				<File Id="412762140" Language="SFX">
+					<ShortName>player_sell.wav</ShortName>
+					<Path>SFX/player_sell_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

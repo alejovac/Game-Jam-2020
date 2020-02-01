@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" SchemaVersion="94">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="player_buy" ID="{263B8BB4-27EF-42D6-BF64-F53F36EC387C}">
+					<ChildrenList>
+						<Action Name="" ID="{733404A8-87B1-452F-B0C3-B6F7EF75B65E}" ShortID="494642471">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="buy" ID="{34A45CB3-E1DC-4336-9613-4D49077C92BD}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="player_sell" ID="{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}">
+					<ChildrenList>
+						<Action Name="" ID="{F3A4A9E1-573F-41A6-AE96-A4570B703404}" ShortID="249189418">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sell" ID="{00E8B2F9-B4E8-4E9B-A6EA-DFCCB88AE0DC}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

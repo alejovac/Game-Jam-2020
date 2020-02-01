@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1138681371	player_buy			\Default Work Unit\player_buy	
+	3409090725	player_sell			\Default Work Unit\player_sell	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	300398778	buy	Y:\Documents\GGJ20\GGJ20_WwiseProject\.cache\Linux\SFX\player_buy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\buy		106732
+	412762140	sell	Y:\Documents\GGJ20\GGJ20_WwiseProject\.cache\Linux\SFX\player_sell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sell		97840
+
