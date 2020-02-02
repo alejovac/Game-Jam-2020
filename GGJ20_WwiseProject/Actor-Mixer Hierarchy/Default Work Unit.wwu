@@ -364,6 +364,9 @@
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{286ECD09-1DA9-4E66-BACC-ED2A54130BFB}" ShortID="550577823">
 													<ReferenceList>
@@ -399,30 +402,6 @@
 															<Point>
 																<XPos>100</XPos>
 																<YPos>-200</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-												<RTPC Name="" ID="{093DA285-F2E9-4C1F-9B86-C683D8AF2D89}" ShortID="784240726">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="humidity" ID="{EA942FC0-57B7-4F66-82AF-A044F052C009}" WorkUnitID="{FB295651-6092-4E12-8023-A3B273BEA091}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{6EAD6635-AED7-431A-906B-B8E02130DCE2}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-200</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>0</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -555,6 +534,27 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="game" ID="{099C53E9-9D59-4D5A-9177-729AD80DC4FA}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="ingame" ID="{AB25EAA2-D038-43EC-890E-38E846ADF195}"/>
+												<CustomState Name="" ID="{39EE3862-200B-46AB-9332-CFEC413C9C08}" ShortID="932432234"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="menu" ID="{1BF9399D-07E7-4AF1-8C52-B1099E0147B7}"/>
+												<CustomState Name="" ID="{CB8FA3D5-8643-4456-AB7E-B78525137097}" ShortID="9130320">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="birds" ID="{36FB3F71-96B4-4CD3-92F4-C76355A02A40}" ShortID="875270566">
 									<PropertyList>
@@ -1052,7 +1052,7 @@
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

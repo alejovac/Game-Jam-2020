@@ -14,12 +14,12 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID MENU_HOME = 2024937266U;
+        static const AkUniqueID MENU_PLAY = 105544633U;
         static const AkUniqueID PL_BUY = 3055392428U;
         static const AkUniqueID PL_PLANT_ADD = 1022277923U;
         static const AkUniqueID PL_PLANT_REMOVE = 1646982530U;
         static const AkUniqueID PL_SELL = 3824442600U;
-        static const AkUniqueID UI_HOME = 12137035U;
-        static const AkUniqueID UI_PLAY = 2382194672U;
     } // namespace EVENTS
 
     namespace STATES
