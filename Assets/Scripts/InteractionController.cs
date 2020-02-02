@@ -163,5 +163,6 @@ public class InteractionController : MonoBehaviour
     {
         SetNaturalResource(null);
         TileVisual.mode = (VisualTileMode)mode;
+        AkSoundEngine.PostEvent("pl_plant_remove", gameObject);
     }
 }
