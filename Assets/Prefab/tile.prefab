@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5bb5bc46a69c3d445829cd2e56ca8f03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,10 +129,12 @@ MonoBehaviour:
   - {fileID: 21300026, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300028, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300030, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
-  render: {fileID: 0}
-  data: {fileID: 0}
-  whiteHumidity: {r: 1, g: 1, b: 1, a: 0.627451}
-  blueHumidity: {r: 0.132921, g: 0.75581884, b: 0.9716981, a: 0.39215687}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  green: {r: 0.14491086, g: 0.8584906, b: 0, a: 1}
+  red: {r: 0.9056604, g: 0, b: 0, a: 1}
+  humidity: {r: 0.0971876, g: 0.41781855, b: 0.7924528, a: 1}
+  light: {r: 1, g: 0.9453353, b: 0.4433962, a: 1}
+  nutrients: {r: 0.9150943, g: 0, b: 0.5696361, a: 1}
 --- !u!61 &3542258792496621836
 BoxCollider2D:
   m_ObjectHideFlags: 0
