@@ -37,11 +37,7 @@ public class InteractionController : MonoBehaviour
     }
 
     public void SetNaturalResourceSelected(int i) {
-        resourceSelected = GameController.instance.naturalResources[i];
-        this.transform.position = Input.mousePosition;
-        GetComponent<Image>().sprite = resourceSelected.spriteResource;
-        flagSelected = true;
-        //.spriteResource
+        SetNaturalResource(GameController.instance.naturalResources[i]);
     }
 
     public void OnPointerDown(PointerEventData eventData){
@@ -59,20 +55,37 @@ public class InteractionController : MonoBehaviour
                 originTile = hitGO.GetComponent<TileLogic>();
                 if (originTile.resource == null)
                 {
-                    bool validTerrain = originTile.OnApplyResource(resourceSelected);//Send feedback
+                    if (resourceSelected != null)
+                        originTile.OnApplyResource(resourceSelected);
                 }
-                else {
-                    resourceSelected = originTile.resource;
-                    this.transform.position = Input.mousePosition;
-                    GetComponent<Image>().sprite = resourceSelected.spriteResource;
-                    flagSelected = true;
-                    //originTile.OnRemoveResource(resourceSelected);
-                } 
-
-
+                else
+                    SetNaturalResource(originTile.resource);
             }
         }
+        else {
+            SetNaturalResource(null);
+        }
+    }
 
+    public void SetNaturalResource(NaturalResource resource)
+    {
+        resourceSelected = resource;
+
+        if (resource != null)
+        {
+            this.transform.position = Input.mousePosition;
+            GetComponent<Image>().sprite = resourceSelected.spriteResource;
+            GetComponent<Image>().enabled = true;
+            flagSelected = true;
+            TileVisual.target = resourceSelected;
+            TileVisual.mode = VisualTileMode.ShowAvailability;
+        }
+        else 
+        {
+            flagSelected = false;
+            GetComponent<Image>().enabled = false;
+            TileVisual.mode = VisualTileMode.ShowWater;
+        }
     }
 
     void OnReleaseResource()

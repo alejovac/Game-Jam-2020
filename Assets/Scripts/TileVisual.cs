@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class TileVisual : MonoBehaviour
 {
+    public static NaturalResource target = null;
+    public static VisualTileMode mode = VisualTileMode.ShowWater;
+
     public List<Sprite> spriteTerrains;
-    public SpriteRenderer render;
-    public TileLogic data;
+    private SpriteRenderer render;
+    private TileLogic data;
 
     //Color Presets
-    public Color whiteHumidity;// = new Color(1.0f,1.0f,1.0f,0.2f);
-    public Color blueHumidity;// = new Color(0.2f, 0.2f, 0.0f, 0.2f);
+    public Color white;
+    public Color green;
+    public Color red;
+    public Color humidity;
+    public Color light;
+    public Color nutrients;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +30,26 @@ public class TileVisual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!data.recovered)
-        {
-            render.material.color = Color.Lerp(whiteHumidity, blueHumidity, ((float)data.humidity) / 20);
+        switch (mode) {
+            case VisualTileMode.ShowWater:
+                render.material.color = Color.Lerp(white, humidity, ((float)data.humidity) / 20);
+                break;
+            case VisualTileMode.ShowLight:
+                render.material.color = Color.Lerp(white, light, ((float)data.luminosity) / 20);
+                break;
+            case VisualTileMode.ShowNutrients:
+                render.material.color = Color.Lerp(white, nutrients, ((float)data.nutrients) / 20);
+                break;
+            case VisualTileMode.ShowAvailability:
+                if (target.CheckTerrain(data))
+                    render.material.color = Color.Lerp(white, green, 0.3f);
+                else
+                    render.material.color = Color.Lerp(white, red, 0.3f);
+                break;
         }
-        else
-            render.material.color = Color.green;
+
+        if (data.recovered)
+            render.material.color = Color.Lerp(render.material.color ,green, 0.4f);
     }
 
     public void OnInit(){
@@ -35,13 +57,18 @@ public class TileVisual : MonoBehaviour
         int auxIdx = Random.Range(9, 11);
         render.sprite = spriteTerrains[auxIdx];//Solo prueba
         data = GetComponent<TileLogic>();
-        render.material.color = Color.Lerp(whiteHumidity, blueHumidity, ((float)data.humidity) / 20);
-        //render.material.color = Color.white;
+        render.material.color = Color.white;
     }
 
     public void OnApplyResource() {
         int auxIdx = Random.Range(0, 2);
         render.sprite = spriteTerrains[auxIdx];//Solo prueba
     }
+}
 
+public enum VisualTileMode {
+    ShowWater,
+    ShowLight,
+    ShowNutrients,
+    ShowAvailability
 }
