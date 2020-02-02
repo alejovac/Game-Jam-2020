@@ -3,6 +3,13 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{03703659-AF31-4223-8B96-5DE86F8C0325}">
 			<PropertyList>
+				<Property Name="Event Action List\{0C6A8501-CD5D-4336-9208-F633F09DAC0B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{263B8BB4-27EF-42D6-BF64-F53F36EC387C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{59403ADE-E446-4E6E-B4E9-66234093AB6D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B561DBC2-7223-446C-BC0E-E788C1CAF99E}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{ECCC2025-0408-4214-999E-B79C4F37C682}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
@@ -17,6 +24,19 @@
 						<Value Platform="Linux">GeneratedSoundBanks\Linux\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="Game Profiler\Capture List\Filters\Scope - Game Object" Type="bool" Value="True"/>
+				<Property Name="Game Profiler\Capture List\Filters\Scope - Global" Type="bool" Value="True"/>
+				<Property Name="Game Profiler\Capture List\Filters\Sub Type - Mask" Type="int32" Value="8191"/>
+				<Property Name="Game Profiler\Capture List\Filters\Type - Mask" Type="int32" Value="36"/>
+				<Property Name="Game Profiler\Capture List\Filters\Wwise Objects - Game Objects" Type="bool" Value="False"/>
+				<Property Name="Game Profiler\Capture List\Filters\Wwise Objects - Hierarchy" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
+				<Property Name="Game Profiler\Capture List\Filters\Wwise Objects - Parents" Type="bool" Value="False"/>
+				<Property Name="Game Profiler\Capture List\Filters\Wwise Objects - PlayingID" Type="bool" Value="False"/>
+				<Property Name="Game Profiler\Capture List\Filters\Wwise Objects - Use Hierarchy" Type="bool" Value="False"/>
+				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="APy3t3wHDki+mtlJm/KK/g=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="PO4tBZPSkEuzKWHEcpg97g=="/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>

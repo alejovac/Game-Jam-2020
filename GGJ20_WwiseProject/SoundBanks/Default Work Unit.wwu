@@ -10,8 +10,8 @@
 						<ObjectRef Name="pl_plant_remove" ID="{0C6A8501-CD5D-4336-9208-F633F09DAC0B}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pl_plant_add" ID="{B561DBC2-7223-446C-BC0E-E788C1CAF99E}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pl_sell" ID="{FEFA0846-2480-44CE-8DA1-1ADCCDA48C8F}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="ui_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="ui_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="menu_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="menu_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

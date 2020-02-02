@@ -39,9 +39,8 @@ public class UIController : MonoBehaviour
         float progress = MapController.instance.OnTilesRecovered()/225.0f;
         progress = Mathf.Min(progress / 0.75f, 1);
         filledBar.fillAmount = progress;
-        float progresspor = 99;
-        print(progresspor);
-        AkSoundEngine.SetRTPCValue("wildlife", progresspor, this.gameObject);
+        float progresspor = progress * 100;
+        AkSoundEngine.SetRTPCValue("wildlife", progresspor);
     }
 
     public void UpdateMoney() {
