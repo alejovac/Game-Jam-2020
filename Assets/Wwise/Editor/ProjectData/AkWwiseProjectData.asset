@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2e00b4f0edfa6648a27022d7f5978ada
     GuidInternal: 
-    m_lastTime: -8586210236484775808
+    m_lastTime: -8586210260389288512
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 38f58a359e0d2c4495f9938b4d9f7cc1
     GuidInternal: 
-    m_lastTime: -8586210166604775808
+    m_lastTime: -8586210073229436541
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9b45382fdde916439efcf3f9f23a42c0
     GuidInternal: 
-    m_lastTime: -8586210096364775808
+    m_lastTime: -8586210024038753973
     List:
     - name: GGJ20
       guid: 3cee2d0593d2904bb32961c472983dee
@@ -41,13 +41,13 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: GGJ20
         ObjectType: 7
-      Path: Default Work Unit/GGJ20
+      Path: Default Work Unit\GGJ20
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 97c86019dc30cc488e1ea73c3a2009f9
     GuidInternal: 
-    m_lastTime: -8586210087624775808
+    m_lastTime: -8586209518947196762
     List:
     - name: game_start
       guid: 2520ccec08041442999eb79c4f37c682
@@ -57,7 +57,31 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_start
         ObjectType: 3
-      Path: Default Work Unit/game_start
+      Path: Default Work Unit\game_start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: menu_home
+      guid: de3a405946e46e4eb4e966234093ab6d
+      id: 2024937266
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: menu_home
+        ObjectType: 3
+      Path: Default Work Unit\menu_home
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: menu_play
+      guid: bcd9402b5e9de3458a67e65e7d353622
+      id: 105544633
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: menu_play
+        ObjectType: 3
+      Path: Default Work Unit\menu_play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -69,10 +93,10 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: pl_buy
         ObjectType: 3
-      Path: Default Work Unit/pl_buy
+      Path: Default Work Unit\pl_buy
       maxAttenuation: 0
-      maxDuration: 0.678375
-      minDuration: 0.678375
+      maxDuration: -1
+      minDuration: -1
     - name: pl_plant_add
       guid: c2db61b523726c44bc0ee788c1caf99e
       id: 1022277923
@@ -81,7 +105,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: pl_plant_add
         ObjectType: 3
-      Path: Default Work Unit/pl_plant_add
+      Path: Default Work Unit\pl_plant_add
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -93,7 +117,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: pl_plant_remove
         ObjectType: 3
-      Path: Default Work Unit/pl_plant_remove
+      Path: Default Work Unit\pl_plant_remove
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -105,40 +129,16 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: pl_sell
         ObjectType: 3
-      Path: Default Work Unit/pl_sell
-      maxAttenuation: 0
-      maxDuration: 0.50925
-      minDuration: 0.50925
-    - name: ui_home
-      guid: de3a405946e46e4eb4e966234093ab6d
-      id: 12137035
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: ui_home
-        ObjectType: 3
-      Path: Default Work Unit/ui_home
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: ui_play
-      guid: bcd9402b5e9de3458a67e65e7d353622
-      id: 2382194672
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: ui_play
-        ObjectType: 3
-      Path: Default Work Unit/ui_play
+      Path: Default Work Unit\pl_sell
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 515629fb9260124e8023a3b273bea091
     GuidInternal: 
-    m_lastTime: -8586210133544775808
+    m_lastTime: -8586210073229446512
     List:
     - name: humidity
       guid: c02f94eab757664f82afa044f052c009
@@ -148,7 +148,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: humidity
         ObjectType: 13
-      Path: Default Work Unit/humidity
+      Path: Default Work Unit\humidity
     - name: volume_fx
       guid: cee9bbbe1f23d64e8eff53b8a936cb13
       id: 135182116
@@ -157,7 +157,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: volume_fx
         ObjectType: 13
-      Path: Default Work Unit/volume_fx
+      Path: Default Work Unit\volume_fx
     - name: volume_mx
       guid: 5f7938c075caf94c81029913da68cf93
       id: 319736021
@@ -166,7 +166,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: volume_mx
         ObjectType: 13
-      Path: Default Work Unit/volume_mx
+      Path: Default Work Unit\volume_mx
     - name: wildlife
       guid: bf0204ea50bd3a428fb09d2e786288c4
       id: 1118910643
@@ -175,13 +175,13 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: wildlife
         ObjectType: 13
-      Path: Default Work Unit/wildlife
+      Path: Default Work Unit\wildlife
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 22fb5d0659c16343b503e33870489267
     GuidInternal: 
-    m_lastTime: -8586210096364775808
+    m_lastTime: -8586210073210204685
     List:
     - name: fx
       guid: 9dd959ba3de8a24997681edce6aa1ef0
@@ -191,7 +191,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: fx
         ObjectType: 9
-      Path: Default Work Unit/fx
+      Path: Default Work Unit\fx
       values:
       - name: mute_sfx
         guid: 679638b6922ff9458701d872ba104eca
@@ -222,7 +222,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game
         ObjectType: 9
-      Path: Default Work Unit/game
+      Path: Default Work Unit\game
       values:
       - name: ingame
         guid: a2ea25ab38d0ec43890e38e846adf195
@@ -253,7 +253,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: mx
         ObjectType: 9
-      Path: Default Work Unit/mx
+      Path: Default Work Unit\mx
       values:
       - name: mute_mx
         guid: 21d328e58a04344993b016501b51bfb0
@@ -284,7 +284,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: plants_state
         ObjectType: 9
-      Path: Default Work Unit/plants_state
+      Path: Default Work Unit\plants_state
       values:
       - name: high
         guid: 6b4e5f44471c8144b92e8812157b6e2c
@@ -314,18 +314,18 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a3217694c89c444caf319f3198229abd
     GuidInternal: 
-    m_lastTime: -8586210236484775808
+    m_lastTime: -8586210260389298444
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 5c22d7cb83861945bf0be00bff6e880c
     GuidInternal: 
-    m_lastTime: -8586210236484775808
+    m_lastTime: -8586210260389288512
     List: []
   ExpandedItems:
   - /GGJ20_WwiseProject
