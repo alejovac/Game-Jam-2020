@@ -8,6 +8,7 @@ public class TileVisual : MonoBehaviour
     public static VisualTileMode mode = VisualTileMode.ShowWater;
 
     public List<Sprite> spriteTerrains;
+    public Sprite spriteSano;
     private SpriteRenderer render;
     private TileLogic data;
 
@@ -32,6 +33,10 @@ public class TileVisual : MonoBehaviour
     {
         int divididor = 15;
 
+        if (data.recovered)
+            render.sprite = spriteSano;
+
+
         if (data.resource == null)
         {
             switch (mode)
@@ -52,9 +57,6 @@ public class TileVisual : MonoBehaviour
                         render.material.color = Color.Lerp(white, red, 0.3f);
                     break;
             }
-
-            if (data.recovered)
-                render.material.color = Color.Lerp(render.material.color, green, 0.4f);
         }
         else
             render.material.color = white;
@@ -71,8 +73,9 @@ public class TileVisual : MonoBehaviour
     }
 
     public void OnApplyResource() {
-        int auxIdx = Random.Range(0, 2);
-        render.sprite = spriteTerrains[auxIdx];//Solo prueba
+        //int auxIdx = Random.Range(0, 2);
+        //render.sprite = spriteTerrains[auxIdx];//Solo prueba
+        render.sprite = spriteSano;//Solo prueba
     }
 }
 

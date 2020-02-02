@@ -514,11 +514,11 @@ MonoBehaviour:
   typeShape: 0
   rangeAction: 3
   cost: 100
-  rangeHealing: 2
-  luminosityNeeded: {x: 1, y: 2}
+  rangeHealing: 3
+  luminosityNeeded: {x: 1, y: 10}
   humidityNeeded: {x: 5, y: 10}
   luminosity: 0
-  humidity: -4
+  humidity: -5
   nutrients: 3
 --- !u!114 &161602795
 MonoBehaviour:
@@ -919,7 +919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052354172, y: 0.15965217}
   m_AnchorMax: {x: 0.39982703, y: 0.78350455}
-  m_AnchoredPosition: {x: -0.25, y: -0.000061035156}
+  m_AnchoredPosition: {x: -0.25, y: 0}
   m_SizeDelta: {x: 1.5, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277213968
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   typeShape: 0
   rangeAction: 3
   cost: 200
-  rangeHealing: 5
+  rangeHealing: 2
   luminosityNeeded: {x: 1, y: 5}
   humidityNeeded: {x: 1, y: 8}
   luminosity: 2
