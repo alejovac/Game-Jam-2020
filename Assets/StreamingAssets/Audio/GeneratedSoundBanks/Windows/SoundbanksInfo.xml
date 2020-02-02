@@ -26,6 +26,8 @@
 				<Event Id="1022277923" Name="pl_plant_add" ObjectPath="\Events\Default Work Unit\pl_plant_add" DurationType="OneShot" DurationMin="0.524125" DurationMax="0.524125"/>
 				<Event Id="1646982530" Name="pl_plant_remove" ObjectPath="\Events\Default Work Unit\pl_plant_remove" DurationType="OneShot" DurationMin="1.290687" DurationMax="1.290687"/>
 				<Event Id="3824442600" Name="pl_sell" ObjectPath="\Events\Default Work Unit\pl_sell" DurationType="OneShot" DurationMin="0.509250" DurationMax="0.509250"/>
+				<Event Id="12137035" Name="ui_home" ObjectPath="\Events\Default Work Unit\ui_home" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2382194672" Name="ui_play" ObjectPath="\Events\Default Work Unit\ui_play" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="10387466" Language="SFX">
@@ -39,6 +41,14 @@
 				<File Id="43601106" Language="SFX">
 					<ShortName>amb_wind_cricket_5.wav</ShortName>
 					<Path>SFX/amb_wind_cricket_5_10C4C929.wem</Path>
+				</File>
+				<File Id="52920791" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-004.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-004_10C4C929.wem</Path>
+				</File>
+				<File Id="110795514" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-006.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-006_10C4C929.wem</Path>
 				</File>
 				<File Id="134248617" Language="SFX">
 					<ShortName>amb_frogs_6.wav</ShortName>
@@ -60,6 +70,10 @@
 					<ShortName>pl_plant_remove.wav</ShortName>
 					<Path>SFX/pl_plant_remove_10C4C929.wem</Path>
 				</File>
+				<File Id="283140523" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-001.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-001_10C4C929.wem</Path>
+				</File>
 				<File Id="322361551" Language="SFX">
 					<ShortName>QP01 0048 Deciduous forest morning songbirds woodpeckers-006.wav</ShortName>
 					<Path>SFX/QP01 0048 Deciduous forest morning songbirds woodpeckers-006_10C4C929.wem</Path>
@@ -67,6 +81,30 @@
 				<File Id="412762140" Language="SFX">
 					<ShortName>player_sell.wav</ShortName>
 					<Path>SFX/player_sell_10C4C929.wem</Path>
+				</File>
+				<File Id="466980363" Language="SFX">
+					<ShortName>QP01 0002 Wind mod soft-003.wav</ShortName>
+					<Path>SFX/QP01 0002 Wind mod soft-003_10C4C929.wem</Path>
+				</File>
+				<File Id="510282522" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-003.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-003_10C4C929.wem</Path>
+				</File>
+				<File Id="522179966" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-002.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-002_10C4C929.wem</Path>
+				</File>
+				<File Id="533054948" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-006.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-006_10C4C929.wem</Path>
+				</File>
+				<File Id="559957005" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-002.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-002_10C4C929.wem</Path>
+				</File>
+				<File Id="581682740" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-007.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-007_10C4C929.wem</Path>
 				</File>
 				<File Id="599904609" Language="SFX">
 					<ShortName>amb_wind_cricket_4.wav</ShortName>
@@ -76,6 +114,14 @@
 					<ShortName>QP01 0048 Deciduous forest morning songbirds woodpeckers-004.wav</ShortName>
 					<Path>SFX/QP01 0048 Deciduous forest morning songbirds woodpeckers-004_10C4C929.wem</Path>
 				</File>
+				<File Id="663243119" Language="SFX">
+					<ShortName>QP01 0002 Wind mod soft-004.wav</ShortName>
+					<Path>SFX/QP01 0002 Wind mod soft-004_10C4C929.wem</Path>
+				</File>
+				<File Id="692723034" Language="SFX">
+					<ShortName>QP01 0002 Wind mod soft-005.wav</ShortName>
+					<Path>SFX/QP01 0002 Wind mod soft-005_10C4C929.wem</Path>
+				</File>
 				<File Id="721780477" Language="SFX">
 					<ShortName>amb_wind_cricket_6.wav</ShortName>
 					<Path>SFX/amb_wind_cricket_6_10C4C929.wem</Path>
@@ -83,6 +129,14 @@
 				<File Id="726572063" Language="SFX">
 					<ShortName>amb_wind_cricket_3.wav</ShortName>
 					<Path>SFX/amb_wind_cricket_3_10C4C929.wem</Path>
+				</File>
+				<File Id="753065309" Language="SFX">
+					<ShortName>QP01 0002 Wind mod soft-001.wav</ShortName>
+					<Path>SFX/QP01 0002 Wind mod soft-001_10C4C929.wem</Path>
+				</File>
+				<File Id="766151503" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-003.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-003_10C4C929.wem</Path>
 				</File>
 				<File Id="772319478" Language="SFX">
 					<ShortName>QP01 0048 Deciduous forest morning songbirds woodpeckers-002.wav</ShortName>
@@ -104,6 +158,10 @@
 					<ShortName>amb_frogs_3.wav</ShortName>
 					<Path>SFX/amb_frogs_3_10C4C929.wem</Path>
 				</File>
+				<File Id="836575082" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-001.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-001_10C4C929.wem</Path>
+				</File>
 				<File Id="862211857" Language="SFX">
 					<ShortName>pl_buy.wav</ShortName>
 					<Path>SFX/pl_buy_10C4C929.wem</Path>
@@ -120,9 +178,25 @@
 					<ShortName>GGJ Loop Theme.wav</ShortName>
 					<Path>SFX/GGJ Loop Theme_D79FB2B7.wem</Path>
 				</File>
+				<File Id="976274455" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-005.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-005_10C4C929.wem</Path>
+				</File>
+				<File Id="993533427" Language="SFX">
+					<ShortName>QP01 0002 Wind mod soft-002.wav</ShortName>
+					<Path>SFX/QP01 0002 Wind mod soft-002_10C4C929.wem</Path>
+				</File>
 				<File Id="1023044921" Language="SFX">
 					<ShortName>amb_frogs_1.wav</ShortName>
 					<Path>SFX/amb_frogs_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1025423798" Language="SFX">
+					<ShortName>QP09 1057 Wetlands marsh day wind 5.0-005.wav</ShortName>
+					<Path>SFX/QP09 1057 Wetlands marsh day wind 5.0-005_10C4C929.wem</Path>
+				</File>
+				<File Id="1054539632" Language="SFX">
+					<ShortName>QP09 1081 Wetlands springs desert day wind 5.0-004.wav</ShortName>
+					<Path>SFX/QP09 1081 Wetlands springs desert day wind 5.0-004_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
