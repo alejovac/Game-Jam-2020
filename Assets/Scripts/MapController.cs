@@ -187,7 +187,6 @@ public class MapController : MonoBehaviour
             }
         }
         float progress = (totalTilesRecovered / 225) * 100;
-        AkSoundEngine.SetRTPCValue("wildlife", progress);
         return totalTilesRecovered;
     }
 

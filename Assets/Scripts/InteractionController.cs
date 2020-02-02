@@ -38,6 +38,8 @@ public class InteractionController : MonoBehaviour
 
     public void SetNaturalResourceSelected(int i) {
         SetNaturalResource(GameController.instance.naturalResources[i]);
+        AkSoundEngine.PostEvent("pl_buy", gameObject);
+        AkSoundEngine.PostEvent("menu_play", gameObject);
     }
 
     public void OnPointerDown(PointerEventData eventData){
