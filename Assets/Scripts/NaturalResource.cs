@@ -38,8 +38,8 @@ public class NaturalResource : MonoBehaviour
     }
 
     public bool CheckTerrain(TileLogic terrain) {
-        bool luminosidadBien = terrain.luminosity >= luminosityNeeded.x && terrain.luminosity <= luminosityNeeded.y;
-        bool humedadBien = humidityNeeded.x <= terrain.humidity && humidityNeeded.y >= terrain.humidity;
+        bool luminosidadBien = Mathf.Max(0,terrain.luminosity) >= luminosityNeeded.x && Mathf.Min(10,terrain.luminosity) <= luminosityNeeded.y;
+        bool humedadBien = Mathf.Max(0, humidityNeeded.x) <= terrain.humidity && humidityNeeded.y >= Mathf.Min(10,terrain.humidity);
         if (luminosidadBien && humedadBien && terrain.nutrients >= -nutrients && terrain.resource == null) {
             print("CheckTerrain: true");
             return true;
