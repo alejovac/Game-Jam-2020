@@ -156,4 +156,10 @@ public class InteractionController : MonoBehaviour
         resourceSelected = null; 
         originTile = null;
     }
+
+    public void UpdateTileView(int mode)
+    {
+        SetNaturalResource(null);
+        TileVisual.mode = (VisualTileMode)mode;
+    }
 }

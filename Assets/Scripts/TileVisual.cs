@@ -30,26 +30,36 @@ public class TileVisual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (mode) {
-            case VisualTileMode.ShowWater:
-                render.material.color = Color.Lerp(white, humidity, ((float)data.humidity) / 20);
-                break;
-            case VisualTileMode.ShowLight:
-                render.material.color = Color.Lerp(white, light, ((float)data.luminosity) / 20);
-                break;
-            case VisualTileMode.ShowNutrients:
-                render.material.color = Color.Lerp(white, nutrients, ((float)data.nutrients) / 20);
-                break;
-            case VisualTileMode.ShowAvailability:
-                if (target.CheckTerrain(data))
-                    render.material.color = Color.Lerp(white, green, 0.3f);
-                else
-                    render.material.color = Color.Lerp(white, red, 0.3f);
-                break;
-        }
+        int divididor = 15;
 
-        if (data.recovered)
-            render.material.color = Color.Lerp(render.material.color ,green, 0.4f);
+        if (data.resource == null)
+        {
+            switch (mode)
+            {
+                case VisualTileMode.ShowWater:
+                    render.material.color = Color.Lerp(white, humidity, ((float) data.humidity) / divididor);
+                    break;
+                case VisualTileMode.ShowLight:
+                    render.material.color = Color.Lerp(white, light, ((float) data.luminosity) / divididor);
+                    break;
+                case VisualTileMode.ShowNutrients:
+                    render.material.color = Color.Lerp(white, nutrients, ((float) data.nutrients) / divididor);
+                    break;
+                case VisualTileMode.ShowAvailability:
+                    if (target.CheckTerrain(data))
+                        render.material.color = Color.Lerp(white, green, 0.3f);
+                    else
+                        render.material.color = Color.Lerp(white, red, 0.3f);
+                    break;
+            }
+
+            if (data.recovered)
+                render.material.color = Color.Lerp(render.material.color, green, 0.4f);
+        }
+        else
+            render.material.color = white;
+
+
     }
 
     public void OnInit(){
@@ -67,8 +77,8 @@ public class TileVisual : MonoBehaviour
 }
 
 public enum VisualTileMode {
-    ShowWater,
-    ShowLight,
-    ShowNutrients,
-    ShowAvailability
+    ShowWater = 1,
+    ShowLight = 2,
+    ShowNutrients = 3,
+    ShowAvailability = 4
 }

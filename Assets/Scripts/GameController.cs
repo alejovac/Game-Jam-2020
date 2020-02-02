@@ -39,6 +39,5 @@ public class GameController : MonoBehaviour
         money += newResource.cost;
         //resourcesBought.Add(newResource);
     }
-
-
+    
 }

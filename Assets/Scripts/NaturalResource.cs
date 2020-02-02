@@ -37,10 +37,12 @@ public class NaturalResource : MonoBehaviour
         
     }
 
-    public bool CheckTerrain(TileLogic terrain) {
+    public bool CheckTerrain(TileLogic terrain)
+    {
+        bool enoughMoney = GameController.instance.money >= cost;
         bool luminosidadBien = Mathf.Max(0,terrain.luminosity) >= luminosityNeeded.x && Mathf.Min(10,terrain.luminosity) <= luminosityNeeded.y;
         bool humedadBien = Mathf.Max(0, humidityNeeded.x) <= terrain.humidity && humidityNeeded.y >= Mathf.Min(10,terrain.humidity);
-        if (luminosidadBien && humedadBien && terrain.nutrients >= -nutrients && terrain.resource == null) {
+        if (luminosidadBien && humedadBien && terrain.nutrients >= -nutrients && terrain.resource == null && enoughMoney) {
             print("CheckTerrain: true");
             return true;
         }
