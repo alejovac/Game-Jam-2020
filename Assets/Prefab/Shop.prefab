@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac71039ece764574eaf73b32326817be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  spriteResource: {fileID: 0}
   typeShape: 0
   rangeAction: 3
   cost: 100
@@ -221,6 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac71039ece764574eaf73b32326817be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  spriteResource: {fileID: 0}
   typeShape: 0
   rangeAction: 2
   cost: 200
@@ -349,6 +353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac71039ece764574eaf73b32326817be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  spriteResource: {fileID: 0}
   typeShape: 0
   rangeAction: 5
   cost: 300
