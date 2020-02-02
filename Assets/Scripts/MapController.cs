@@ -186,6 +186,8 @@ public class MapController : MonoBehaviour
                 totalTilesRecovered += tiles[i, j].GetComponent<TileLogic>().recovered ? 1 : 0;
             }
         }
+        float progress = (totalTilesRecovered / 225) * 100;
+        AkSoundEngine.SetRTPCValue("wildlife", progress);
         return totalTilesRecovered;
     }
 

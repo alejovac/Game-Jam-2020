@@ -50,10 +50,8 @@ public class TileLogic : MonoBehaviour
     }
 
     public bool OnApplyResource(NaturalResource _resource) {
-        print("Aplicó");
         if (map.OnApplyResource(logicPosX, logicPosY, _resource))
         {
-            print("Funcionó");
             resource = _resource;
             GetComponent<SpriteRenderer>().sprite = resource.spriteResource;
             MapController.instance.OnTilesRecovered();
