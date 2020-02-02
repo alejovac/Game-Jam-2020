@@ -37,6 +37,7 @@ public class UIController : MonoBehaviour
     public void CalculateProgress(){
         Debug.Log(MapController.instance.OnTilesRecovered());
         float progress = MapController.instance.OnTilesRecovered()/225.0f;
+        progress = Mathf.Min(progress / 0.75f, 1);
         filledBar.fillAmount = progress;
         float progresspor = 99;
         print(progresspor);

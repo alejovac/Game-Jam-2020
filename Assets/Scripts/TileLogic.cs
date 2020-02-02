@@ -10,6 +10,7 @@ public class TileLogic : MonoBehaviour
 
     public bool recovered;
     public MapController map;
+    public SpriteRenderer renderContenido;
 
     int logicPosX;
     int logicPosY;
@@ -53,7 +54,7 @@ public class TileLogic : MonoBehaviour
         if (map.OnApplyResource(logicPosX, logicPosY, _resource))
         {
             resource = _resource;
-            GetComponent<SpriteRenderer>().sprite = resource.spriteResource;
+            renderContenido.sprite = resource.spriteResource;
             MapController.instance.OnTilesRecovered();
             GameController.instance.OnResourceBought(resource);
             UIController.instance.CalculateProgress();
