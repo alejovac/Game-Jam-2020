@@ -10,11 +10,11 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="ui_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<ObjectRef Name="menu_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="ui_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
+							<ObjectRef Name="menu_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}" WorkUnitID="{1960C897-30DC-48CC-8E1E-A73C3A2009F9}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
@@ -37,7 +37,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="wildlife" ID="{EA0402BF-BD50-423A-8FB0-9D2E786288C4}"/>
-							<Value>100</Value>
+							<Value>96</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="volume_mx" ID="{C038795F-CA75-4CF9-8102-9913DA68CF93}"/>

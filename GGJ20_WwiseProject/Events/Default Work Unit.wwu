@@ -63,6 +63,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{08E75E07-61CE-4DA7-B9FE-2481DE9A69B5}" ShortID="488855222">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{2EC03C36-4156-4E3D-8AB1-066F9A3BC055}" ShortID="452067962">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
@@ -86,18 +93,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ui_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}">
+				<Event Name="menu_play" ID="{2B40D9BC-9D5E-45E3-8A67-E65E7D353622}">
 					<ChildrenList>
-						<Action Name="" ID="{B92EF7A2-B62D-4734-ABA0-A473018DB81F}" ShortID="564622500">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{3BD9B59F-905B-4F2F-9DFB-EB76A1FB4AA5}" ShortID="1050430250">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
@@ -120,18 +117,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ui_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}">
+				<Event Name="menu_home" ID="{59403ADE-E446-4E6E-B4E9-66234093AB6D}">
 					<ChildrenList>
-						<Action Name="" ID="{19CA6656-E8AD-4C17-9031-99D77B994B71}" ShortID="937518772">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="wind" ID="{9ADF3117-6E28-4F64-A79E-54677242A3B6}" WorkUnitID="{BF0A25CB-49A8-45C4-852C-A651D2433E4F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{A4563873-381C-4A46-8272-8307BE54B0C4}" ShortID="1037321203">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
