@@ -8,6 +8,10 @@ public class TileVisual : MonoBehaviour
     public SpriteRenderer render;
     public TileLogic data;
 
+    //Color Presets
+    public Color whiteHumidity;// = new Color(1.0f,1.0f,1.0f,0.2f);
+    public Color blueHumidity;// = new Color(0.2f, 0.2f, 0.0f, 0.2f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +23,7 @@ public class TileVisual : MonoBehaviour
     {
         if (!data.recovered)
         {
-            render.material.color = Color.Lerp(Color.white, Color.cyan, ((float)data.humidity) / 20);
+            render.material.color = Color.Lerp(whiteHumidity, blueHumidity, ((float)data.humidity) / 20);
         }
         else
             render.material.color = Color.green;
@@ -29,7 +33,7 @@ public class TileVisual : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         render.sprite = spriteTerrains[14];
         data = GetComponent<TileLogic>();
-        render.material.color = Color.Lerp(Color.white, Color.cyan, ((float)data.humidity) / 20);
+        render.material.color = Color.Lerp(whiteHumidity, blueHumidity, ((float)data.humidity) / 20);
         //render.material.color = Color.white;
     }
 

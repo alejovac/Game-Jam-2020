@@ -14,6 +14,10 @@ public class MapController : MonoBehaviour
 
     public GameObject tileGO;
 
+    private void Awake(){
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

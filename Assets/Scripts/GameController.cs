@@ -6,13 +6,15 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     public List<NaturalResource> naturalResources;
-
     
-
-
     public int money;
 
     //List<NaturalResource> resourcesBought;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

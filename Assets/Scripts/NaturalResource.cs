@@ -8,14 +8,15 @@ public class NaturalResources {
 
 public class NaturalResource : MonoBehaviour
 {
-    string name;
-    Sprite spriteResource;
+    public string name;
+    public Sprite spriteResource;
 
     public enum shapeAction {sphere,row,column};
     public shapeAction typeShape;
     public int rangeAction;
     public int cost;
     public int rangeHealing;
+
     //Condition
     public Vector2 luminosityNeeded;
     public Vector2 humidityNeeded;
@@ -40,10 +41,10 @@ public class NaturalResource : MonoBehaviour
         bool luminosidadBien = terrain.luminosity >= luminosityNeeded.x && terrain.luminosity <= luminosityNeeded.y;
         bool humedadBien = humidityNeeded.x <= terrain.humidity && humidityNeeded.y >= terrain.humidity;
         if (luminosidadBien && humedadBien && terrain.nutrients >= -nutrients && terrain.resource == null) {
-            print("CeckTerrain: true");
+            print("CheckTerrain: true");
             return true;
         }
-        print("CeckTerrain: false");
+        print("CheckTerrain: false");
         return false;
     }
 }

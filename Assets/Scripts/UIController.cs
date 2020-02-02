@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController instance;
     public NaturalResource dragableResource;
 
     public Image filledBar;
     public Text moneyLabel;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +35,8 @@ public class UIController : MonoBehaviour
     }
 
     public void CalculateProgress(){
-        float progress = 2.25f * MapController.instance.OnTilesRecovered();
+        Debug.Log(MapController.instance.OnTilesRecovered());
+        float progress = MapController.instance.OnTilesRecovered()/225.0f;
         filledBar.fillAmount = progress;
     }
 
