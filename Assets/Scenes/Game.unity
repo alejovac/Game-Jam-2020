@@ -295,7 +295,7 @@ MonoBehaviour:
   - {fileID: 1036388889}
   - {fileID: 1984231511}
   - {fileID: 1900302871}
-  money: 2000
+  money: 20000
 --- !u!4 &80798048
 Transform:
   m_ObjectHideFlags: 0
