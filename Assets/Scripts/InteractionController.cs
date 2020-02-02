@@ -66,6 +66,7 @@ public class InteractionController : MonoBehaviour
                     this.transform.position = Input.mousePosition;
                     GetComponent<Image>().sprite = resourceSelected.spriteResource;
                     flagSelected = true;
+                    AkSoundEngine.PostEvent("pl_plant_add", gameObject);
                     //originTile.OnRemoveResource(resourceSelected);
                 } 
 

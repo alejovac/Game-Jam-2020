@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         AkSoundEngine.PostEvent("game_start", gameObject);
+        AkSoundEngine.PostEvent("ui_play", gameObject);
     }
 
     // Update is called once per frame

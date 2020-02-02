@@ -99,6 +99,7 @@ public class MapController : MonoBehaviour
         if (_resource.CheckTerrain(tile))
         {
             ApplyResourceEffect(_resource, x, y);
+            AkSoundEngine.PostEvent("pl_plant_add", gameObject);
             //if (_resource.typeShape == NaturalResource.shapeAction.sphere)
             //{
             //    var range = _resource.rangeAction;
