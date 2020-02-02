@@ -1,8 +1,48 @@
 Event	ID	Name			Wwise Object Path	Notes
+	733168346	game_start			\Default Work Unit\game_start	
+	1022277923	pl_plant_add			\Default Work Unit\pl_plant_add	
+	1646982530	pl_plant_remove			\Default Work Unit\pl_plant_remove	
 	3055392428	pl_buy			\Default Work Unit\pl_buy	
 	3824442600	pl_sell			\Default Work Unit\pl_sell	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	702482391	game			\Default Work Unit\game	
+
+State	ID	Name	State Group			Notes
+	0	None	game			
+	984691642	ingame	game			
+	2607556080	menu	game			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	100677758	menu	game	\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1118910643	wildlife			\Default Work Unit\wildlife	
+	3577765598	humidity			\Default Work Unit\humidity	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	10387466	amb_frogs_4	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_4		544708
+	33480405	amb_wind_cricket_7	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_7		1715788
+	43601106	amb_wind_cricket_5	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_5		1774952
+	134248617	amb_frogs_6	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_6		339272
+	138813714	amb_wind_cricket_2	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_2		1545520
+	182583509	QP01 0048 Deciduous forest morning songbirds woodpeckers-005	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-005		2325400
+	234448968	amb_frogs_5	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_5		382268
+	282203533	plant_remove	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\pl_plant_remove_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\plant_remove		123970
+	322361551	QP01 0048 Deciduous forest morning songbirds woodpeckers-006	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-006		3067592
 	412762140	sell	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\player_sell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sell		97840
+	599904609	amb_wind_cricket_4	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_4		1589872
+	625548458	QP01 0048 Deciduous forest morning songbirds woodpeckers-004	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-004		2009272
+	721780477	amb_wind_cricket_6	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_6		1863696
+	726572063	amb_wind_cricket_3	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_3		1595056
+	772319478	QP01 0048 Deciduous forest morning songbirds woodpeckers-002	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-002		2542416
+	798247170	amb_frogs_2	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_2		339272
+	802016425	plant_add	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\pl_plant_add_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\plant_add		50380
+	818657309	amb_wind_cricket_1	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_wind_cricket_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\crickets\amb_wind_cricket_1		1701652
+	830568659	amb_frogs_3	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_3		310608
 	862211857	buy	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\pl_buy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\buy		65188
+	873593559	QP01 0048 Deciduous forest morning songbirds woodpeckers-003	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-003		2535320
+	931711870	QP01 0048 Deciduous forest morning songbirds woodpeckers-001	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\QP01 0048 Deciduous forest morning songbirds woodpeckers-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\birds\QP01 0048 Deciduous forest morning songbirds woodpeckers-001		3189048
+	941654147	GGJ Loop Theme	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\GGJ Loop Theme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\music\GGJ Loop Theme\GGJ Loop Theme		5439552
+	1023044921	amb_frogs_1	Y:\Documents\GGJ2020\Game-Jam-2020\GGJ20_WwiseProject\.cache\Windows\SFX\amb_frogs_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\ambience\frogs\amb_frogs_1		339272
 

@@ -12,14 +12,322 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1581c7a36c42a4619ab6ef14e452f214, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 2e00b4f0edfa6648a27022d7f5978ada
+    GuidInternal: 
+    m_lastTime: -8586210236484775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 38f58a359e0d2c4495f9938b4d9f7cc1
+    GuidInternal: 
+    m_lastTime: -8586210166604775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 9b45382fdde916439efcf3f9f23a42c0
+    GuidInternal: 
+    m_lastTime: -8586210096364775808
+    List:
+    - name: GGJ20
+      guid: 3cee2d0593d2904bb32961c472983dee
+      id: 2182974741
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GGJ20
+        ObjectType: 7
+      Path: Default Work Unit/GGJ20
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 97c86019dc30cc488e1ea73c3a2009f9
+    GuidInternal: 
+    m_lastTime: -8586210087624775808
+    List:
+    - name: game_start
+      guid: 2520ccec08041442999eb79c4f37c682
+      id: 733168346
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_start
+        ObjectType: 3
+      Path: Default Work Unit/game_start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pl_buy
+      guid: b48b3b26ef27d642bf64f53f36ec387c
+      id: 3055392428
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pl_buy
+        ObjectType: 3
+      Path: Default Work Unit/pl_buy
+      maxAttenuation: 0
+      maxDuration: 0.678375
+      minDuration: 0.678375
+    - name: pl_plant_add
+      guid: c2db61b523726c44bc0ee788c1caf99e
+      id: 1022277923
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pl_plant_add
+        ObjectType: 3
+      Path: Default Work Unit/pl_plant_add
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pl_plant_remove
+      guid: 01856a0c5dcd36439208f633f09dac0b
+      id: 1646982530
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pl_plant_remove
+        ObjectType: 3
+      Path: Default Work Unit/pl_plant_remove
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pl_sell
+      guid: 4608fafe8024ce448da11adccda48c8f
+      id: 3824442600
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pl_sell
+        ObjectType: 3
+      Path: Default Work Unit/pl_sell
+      maxAttenuation: 0
+      maxDuration: 0.50925
+      minDuration: 0.50925
+    - name: ui_home
+      guid: de3a405946e46e4eb4e966234093ab6d
+      id: 12137035
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_home
+        ObjectType: 3
+      Path: Default Work Unit/ui_home
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_play
+      guid: bcd9402b5e9de3458a67e65e7d353622
+      id: 2382194672
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_play
+        ObjectType: 3
+      Path: Default Work Unit/ui_play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 515629fb9260124e8023a3b273bea091
+    GuidInternal: 
+    m_lastTime: -8586210133544775808
+    List:
+    - name: humidity
+      guid: c02f94eab757664f82afa044f052c009
+      id: 3577765598
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: humidity
+        ObjectType: 13
+      Path: Default Work Unit/humidity
+    - name: volume_fx
+      guid: cee9bbbe1f23d64e8eff53b8a936cb13
+      id: 135182116
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: volume_fx
+        ObjectType: 13
+      Path: Default Work Unit/volume_fx
+    - name: volume_mx
+      guid: 5f7938c075caf94c81029913da68cf93
+      id: 319736021
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: volume_mx
+        ObjectType: 13
+      Path: Default Work Unit/volume_mx
+    - name: wildlife
+      guid: bf0204ea50bd3a428fb09d2e786288c4
+      id: 1118910643
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: wildlife
+        ObjectType: 13
+      Path: Default Work Unit/wildlife
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 22fb5d0659c16343b503e33870489267
+    GuidInternal: 
+    m_lastTime: -8586210096364775808
+    List:
+    - name: fx
+      guid: 9dd959ba3de8a24997681edce6aa1ef0
+      id: 1802970371
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: fx
+        ObjectType: 9
+      Path: Default Work Unit/fx
+      values:
+      - name: mute_sfx
+        guid: 679638b6922ff9458701d872ba104eca
+        id: 1305760402
+        PathAndIcons:
+        - ElementName: mute_sfx
+          ObjectType: 8
+      - name: None
+        guid: 0be98bcaa0108c41ae426cb826a5720c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: unmute_sfx
+        guid: e80bc96cfa0b7c46b21ca0402312cfe6
+        id: 141872311
+        PathAndIcons:
+        - ElementName: unmute_sfx
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: game
+      guid: e9539c09599d5a4d9177729ad80dc4fa
+      id: 702482391
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game
+        ObjectType: 9
+      Path: Default Work Unit/game
+      values:
+      - name: ingame
+        guid: a2ea25ab38d0ec43890e38e846adf195
+        id: 984691642
+        PathAndIcons:
+        - ElementName: ingame
+          ObjectType: 8
+      - name: menu
+        guid: 9d39f91be707f14a8c52b1099e0147b7
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 8
+      - name: None
+        guid: ea6899778aaa454c8a1c99cc9565aeeb
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: mx
+      guid: 4bc53caa13daf7468941943cc98e5cae
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mx
+        ObjectType: 9
+      Path: Default Work Unit/mx
+      values:
+      - name: mute_mx
+        guid: 21d328e58a04344993b016501b51bfb0
+        id: 1814839050
+        PathAndIcons:
+        - ElementName: mute_mx
+          ObjectType: 8
+      - name: None
+        guid: 83e2c361e64bb4418fe61e8dce01ab64
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: unmute_mx
+        guid: ce7bae2a6019fe4c8f7df3c8094aaf40
+        id: 3963825173
+        PathAndIcons:
+        - ElementName: unmute_mx
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: plants_state
+      guid: 129f7a65f5e325469e373dcea7d197bb
+      id: 2735915761
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plants_state
+        ObjectType: 9
+      Path: Default Work Unit/plants_state
+      values:
+      - name: high
+        guid: 6b4e5f44471c8144b92e8812157b6e2c
+        id: 3550808449
+        PathAndIcons:
+        - ElementName: high
+          ObjectType: 8
+      - name: low
+        guid: 58cc9d54442b4443b9538350b75b34fe
+        id: 545371365
+        PathAndIcons:
+        - ElementName: low
+          ObjectType: 8
+      - name: medium
+        guid: 3d2653f45e9b4a4fbf2304e250a841a3
+        id: 2849147824
+        PathAndIcons:
+        - ElementName: medium
+          ObjectType: 8
+      - name: None
+        guid: f82ddf5c2e6339448165d33dd92eadfc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: a3217694c89c444caf319f3198229abd
+    GuidInternal: 
+    m_lastTime: -8586210236484775808
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 5c22d7cb83861945bf0be00bff6e880c
+    GuidInternal: 
+    m_lastTime: -8586210236484775808
+    List: []
+  ExpandedItems:
+  - /GGJ20_WwiseProject
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

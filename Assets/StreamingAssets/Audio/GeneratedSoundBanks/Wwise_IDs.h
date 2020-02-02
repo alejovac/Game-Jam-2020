@@ -13,7 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID GAME_START = 733168346U;
         static const AkUniqueID PL_BUY = 3055392428U;
+        static const AkUniqueID PL_PLANT_ADD = 1022277923U;
+        static const AkUniqueID PL_PLANT_REMOVE = 1646982530U;
         static const AkUniqueID PL_SELL = 3824442600U;
     } // namespace EVENTS
 
