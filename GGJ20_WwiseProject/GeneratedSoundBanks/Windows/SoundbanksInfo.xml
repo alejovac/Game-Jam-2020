@@ -24,9 +24,9 @@
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" DurationType="Infinite"/>
 				<Event Id="2024937266" Name="menu_home" ObjectPath="\Events\Default Work Unit\menu_home" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="105544633" Name="menu_play" ObjectPath="\Events\Default Work Unit\menu_play" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3055392428" Name="pl_buy" ObjectPath="\Events\Default Work Unit\pl_buy" DurationType="OneShot" DurationMin="0.678375" DurationMax="0.678375"/>
-				<Event Id="1022277923" Name="pl_plant_add" ObjectPath="\Events\Default Work Unit\pl_plant_add" DurationType="OneShot" DurationMin="0.524125" DurationMax="0.524125"/>
-				<Event Id="1646982530" Name="pl_plant_remove" ObjectPath="\Events\Default Work Unit\pl_plant_remove" DurationType="OneShot" DurationMin="1.290687" DurationMax="1.290687"/>
+				<Event Id="3055392428" Name="pl_buy" ObjectPath="\Events\Default Work Unit\pl_buy" DurationType="OneShot" DurationMin="0.621354" DurationMax="0.740628"/>
+				<Event Id="1022277923" Name="pl_plant_add" ObjectPath="\Events\Default Work Unit\pl_plant_add" DurationType="OneShot" DurationMin="0.446371" DurationMax="0.588990"/>
+				<Event Id="1646982530" Name="pl_plant_remove" ObjectPath="\Events\Default Work Unit\pl_plant_remove" DurationType="OneShot" DurationMin="1.083455" DurationMax="1.493786"/>
 				<Event Id="3824442600" Name="pl_sell" ObjectPath="\Events\Default Work Unit\pl_sell" DurationType="OneShot" DurationMin="0.509250" DurationMax="0.509250"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
