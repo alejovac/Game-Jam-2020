@@ -36,10 +36,16 @@ public class InteractionController : MonoBehaviour
         }
     }
 
+    public bool gmStart = false;
     public void SetNaturalResourceSelected(int i) {
         SetNaturalResource(GameController.instance.naturalResources[i]);
         AkSoundEngine.PostEvent("pl_buy", gameObject);
-        AkSoundEngine.PostEvent("menu_play", gameObject);
+        if (gmStart==false)
+        {
+            AkSoundEngine.PostEvent("menu_play", gameObject);
+            gmStart = true;
+        }
+
     }
 
     public void OnPointerDown(PointerEventData eventData){
