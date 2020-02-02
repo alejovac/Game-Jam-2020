@@ -19,8 +19,10 @@ public class InteractionController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             DragNaturalResource();
+            AkSoundEngine.PostEvent("pl_buy", gameObject);
         } else if (Input.GetMouseButtonUp(0) && plant != null) {
             DropNaturalResource();
+            AkSoundEngine.PostEvent("pl_plant_add", gameObject);
         }
     }
 
