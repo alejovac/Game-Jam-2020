@@ -57,7 +57,9 @@ public class TileLogic : MonoBehaviour
             resource = _resource;
             GetComponent<SpriteRenderer>().sprite = resource.spriteResource;
             MapController.instance.OnTilesRecovered();
+            GameController.instance.OnResourceBought(resource);
             UIController.instance.CalculateProgress();
+            UIController.instance.UpdateMoney();
             return true;
         }
         else return false;
@@ -67,9 +69,11 @@ public class TileLogic : MonoBehaviour
         luminosity -= _resource.luminosity;
         humidity -= _resource.humidity;
         nutrients -= _resource.nutrients;
+        GetComponent<TileVisual>().OnApplyResource();
     }
 
     public void OnRemoveResource(NaturalResource _resource) {
+        //Desplantar
     }
 
 

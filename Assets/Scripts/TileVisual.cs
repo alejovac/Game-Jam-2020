@@ -16,6 +16,7 @@ public class TileVisual : MonoBehaviour
     void Start()
     {
         OnInit();
+
     }
 
     // Update is called once per frame
@@ -31,12 +32,16 @@ public class TileVisual : MonoBehaviour
 
     public void OnInit(){
         render = GetComponent<SpriteRenderer>();
-        render.sprite = spriteTerrains[14];
+        int auxIdx = Random.Range(9, 11);
+        render.sprite = spriteTerrains[auxIdx];//Solo prueba
         data = GetComponent<TileLogic>();
         render.material.color = Color.Lerp(whiteHumidity, blueHumidity, ((float)data.humidity) / 20);
         //render.material.color = Color.white;
     }
 
-    //Capturar raycast
+    public void OnApplyResource() {
+        int auxIdx = Random.Range(0, 2);
+        render.sprite = spriteTerrains[auxIdx];//Solo prueba
+    }
 
 }

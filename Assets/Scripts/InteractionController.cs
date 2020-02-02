@@ -26,10 +26,11 @@ public class InteractionController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //DragNaturalResource();
-            OnPutResource();
+            OnCheckRayCast();
         }
         else if (Input.GetMouseButtonUp(0) && resourceSelected != null)
         {
+            //OnReleaseResource();
             //DropNaturalResource();
 
         }
@@ -48,7 +49,7 @@ public class InteractionController : MonoBehaviour
         this.transform.position = new Vector3(0.0f,135.0f,0.0f);
     }
 
-    public void OnPutResource() {
+    public void OnCheckRayCast() {
         RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit.collider != null)
         {
@@ -56,7 +57,17 @@ public class InteractionController : MonoBehaviour
             if (hitGO.tag == "MapTile")
             {
                 originTile = hitGO.GetComponent<TileLogic>();
-                bool validTerrain = originTile.OnApplyResource(resourceSelected);//Send feedback
+                if (originTile.resource == null)
+                {
+                    bool validTerrain = originTile.OnApplyResource(resourceSelected);//Send feedback
+                }
+                else {
+                    resourceSelected = originTile.resource;
+                    this.transform.position = Input.mousePosition;
+                    GetComponent<Image>().sprite = resourceSelected.spriteResource;
+                    flagSelected = true;
+                    //originTile.OnRemoveResource(resourceSelected);
+                } 
 
 
             }
@@ -64,6 +75,27 @@ public class InteractionController : MonoBehaviour
 
     }
 
+    void OnReleaseResource()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider != null)
+        {
+            GameObject hitGO = hit.collider.gameObject;
+
+            if (hitGO.tag == "ShopTile")
+            {
+                if (originTile != null)
+                {
+                    print("venta");
+                    flagSelected = false;
+                    originTile.OnRemoveResource(resourceSelected);
+                }
+            }
+        }
+
+        resourceSelected = null;
+        originTile = null;
+    }
 
     void DragNaturalResource()
     {
@@ -92,7 +124,7 @@ public class InteractionController : MonoBehaviour
         if (hit.collider != null) {
             GameObject hitGO = hit.collider.gameObject;
 
-            if (hitGO.tag == "MapTile") {
+           if (hitGO.tag == "MapTile") {
                 hitGO.GetComponent<TileLogic>().OnApplyResource(resourceSelected);
                 if (originTile != null) {
                     originTile.OnRemoveResource(resourceSelected);
@@ -101,6 +133,8 @@ public class InteractionController : MonoBehaviour
                 }
             } else if (hitGO.tag == "ShopTile") {
                 if (originTile != null) {
+                    print("venta");
+                    flagSelected = false;
                     originTile.OnRemoveResource(resourceSelected);
                 }
             }

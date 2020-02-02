@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteTerrains:
-  - {fileID: 21300000, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
-  - {fileID: 21300002, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
+  - {fileID: 21300000, guid: ea93ac19141b61147a0cf5542147d89f, type: 3}
+  - {fileID: 21300000, guid: 2cfb95de12fd7c3468358892225e5c02, type: 3}
   - {fileID: 21300004, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300006, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300008, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
@@ -122,8 +122,8 @@ MonoBehaviour:
   - {fileID: 21300012, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300014, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300016, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
-  - {fileID: 21300018, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
-  - {fileID: 21300020, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
+  - {fileID: 21300000, guid: 5bb5bc46a69c3d445829cd2e56ca8f03, type: 3}
+  - {fileID: 21300000, guid: 595ea378bdb302c419d49d9c9eda05ba, type: 3}
   - {fileID: 21300022, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300024, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   - {fileID: 21300026, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
@@ -131,8 +131,8 @@ MonoBehaviour:
   - {fileID: 21300030, guid: 8542588f8ea4eb247867fd96f694423e, type: 3}
   render: {fileID: 0}
   data: {fileID: 0}
-  whiteHumidity: {r: 1, g: 1, b: 1, a: 0.39215687}
-  blueHumidity: {r: 0.29019615, g: 0.4268313, b: 0.8, a: 0.39215687}
+  whiteHumidity: {r: 1, g: 1, b: 1, a: 0.627451}
+  blueHumidity: {r: 0.132921, g: 0.75581884, b: 0.9716981, a: 0.39215687}
 --- !u!61 &3542258792496621836
 BoxCollider2D:
   m_ObjectHideFlags: 0

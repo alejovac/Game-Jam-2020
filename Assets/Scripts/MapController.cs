@@ -98,7 +98,7 @@ public class MapController : MonoBehaviour
         TileLogic tile = tiles[x, y].GetComponent<TileLogic>();
         if (_resource.CheckTerrain(tile))
         {
-            ApplyResourseEffect(_resource, x, y);
+            ApplyResourceEffect(_resource, x, y);
             //if (_resource.typeShape == NaturalResource.shapeAction.sphere)
             //{
             //    var range = _resource.rangeAction;
@@ -122,7 +122,7 @@ public class MapController : MonoBehaviour
 
     }
 
-    void ApplyResourseEffect(NaturalResource resource, int x, int y)
+    void ApplyResourceEffect(NaturalResource resource, int x, int y)
     {
         for (int xx = -resource.rangeAction; xx < resource.rangeAction; xx++)
         {
@@ -152,6 +152,7 @@ public class MapController : MonoBehaviour
                 {
                     TileLogic currTile = tiles[x+xx, y+yy].GetComponent<TileLogic>();
                     currTile.recovered = true;
+
                 }
             }
         }
